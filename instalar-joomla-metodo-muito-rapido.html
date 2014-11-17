@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="index.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="joomla, instalação, instalar, tutorial, cms, wget, mkdir, ssh, rm, putty, rapido, prompt" />
+  <meta name="author" content="Emerson Rocha Luiz" />
+  <meta name="description" content="É possivel instalar o Joomla de forma muito rápida, em menos de um minuto? A resposta é: SIM, é possivel. Descobra como lendo este tutorial" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Como instalar o Joomla - Método Muito rápido</title>
+  <link href="instalar-joomla-metodo-muito-rapido.html" rel="canonical" />
+  <link href="/templates/fititntv3/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/fititntv3/css/template4.css" type="text/css" />
+  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				
+			});function do_nothing() { return; }jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+  </script>
+  <link type="text/css" rel="stylesheet" href="plugins/content/CodeCitation/codecitation/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="plugins/content/CodeCitation/codecitation/styles/shThemeDefault.css"/>
+<script type="text/javascript" src="plugins/content/CodeCitation/codecitation/scripts/shCore.js"></script>
+  <script type="text/javascript" src="plugins/content/CodeCitation/codecitation/scripts/shBrushPhp.js"></script>
+  <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  <link href='https://plus.google.com/103165086227320151428' rel='author'/>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-478966-13']);
+    _gaq.push(['_setDomainName', 'www.fititnt.org']);
+    _gaq.push(['_addIgnoredRef', 'www.fititnt.org']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://pw.alligo.com.br/";
+      _paq.push(["setTrackerUrl", u+"piwik.php"]);
+      _paq.push(["setSiteId", "1"]);
+      var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+      g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+</head>
+<body class="site com_content view-article no-layout no-task itemid-92" itemscope itemtype="http://schema.org/WebPage">
+	<div id="skip">
+		<a href="#content">Pular para conteúdo</a>
+	</div>
+    <div class="body">
+        <div class="container">
+            <header class="header">
+                <div class="header-inner clearfix">
+                    <h1 class="brand pull-left">
+                      <a href="index.html">
+                        <img alt="Programador &amp; consultor focado em Web Standards .::. Joomla!, PHP, Javascript, UI/UX" title="Voltar à página inicial" width="150" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABACAMAAADPuH7iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8r+/2UBA/O/vzxAQ0iAg7J+f9c/P1jAw32Bg6Y+P76+v4nBw+d/f3FBQ5oCAzAAA////nO5BRgAAABF0Uk5T/////////////////////wAlrZliAAABkklEQVR42uzZ63aDIAwAYIKAeCnw/k87J7XDoDJYLZyz5FerNHxWBTHMNRmMWMT63yzFGFNtsfgAdg3/1axx+eO1BbuXNXbWhqzw83GYtYW5lSWtbZDFuyZZg02xYkS0JX0kvzzAF+t5tT/G5VZsiOXP4cOd91GF5TOGQxYeIGJWNEDcxfrjBU4sYhErCKn7ZW8HB5P7EcviiPowuAWLkuEW4NP/tDDB7CYkFqHcn2IpgXbzFliqw/sFr8+KVdb21VmTVwm9TFX6dTZlgnVyE71jqmbBv7N1xZ4wUTZAvJc1BWuG3m8a67N2wx2LpJVYsB89e7yxEmveswZ8cdVhPfAKIpX7MyyJWLwN1pya0+uwXJMsIBaxiEUsYhGLWMRqkaXTrLmUpUtYQ/QAHLH86rnn2SycO4O1rWIEAKhjFmzrL4Api4VzZ7Bcd/UOApdCIIuFc+ewTJIVFI4yWaactb07OGcFZbZMFsqdw3Jcp1huFGUslDuzdMq/6ymM8YsmShojSwrLYW6q7BOLWC3ElwADANs3QeEEqCaUAAAAAElFTkSuQmCC"/>
+                      </a>
+                    </h1>
+                    <div class="header-search pull-right" role="search">
+<form id="mod-finder-searchform" action="/pesquisar.html" method="get" class="form-search">
+	<div class="finder">
+		<label for="mod-finder-searchword" class="finder hidden">Pesquisar no site</label><br /><input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="20" value="" placeholder="Faça uma pesquisa completa no site agora"/><button class="btn btn-primary hasTooltip  finder" type="submit" title="Ir">Ir</button>
+					</div>
+</form>
+
+</div>
+
+                </div>
+            </header>
+                            <div id="menu-principal" class="navigation" role="navigation">
+                    		<nav class="moduletable">
+
+					<h2 class="hidden">Navegação principal</h2>
+		
+			<ul class="nav menu nav-pills">
+<li class="item-159"><a href="index.html" >Início</a></li><li class="item-160"><a href="sobre.html" >Sobre o Autor</a></li><li class="item-298"><a href="/profissional/suporte-joomla.html" >Consultoria</a></li><li class="item-309"><a href="curso.html" >Cursos &amp; Treinamentos</a></li><li class="item-167"><a href="contato.html" >Contato</a></li></ul>
+
+		</nav>
+
+	
+                </div>
+                        
+            <div class="row-fluid">
+                                    <div id="sidebar" class="span3">
+                        <div class="sidebar-nav" role="navigation">
+                            		<div class="moduletable">
+
+					<h2 class="page-header">Alguns tópicos gerais</h2>
+		
+			<ul class="nav menu">
+<li class="item-278"><a href="comunidade.html" >Comunidade Software Livre</a></li><li class="item-311"><a href="frontend.html" >Frontend (HTML, CSS, JS)</a></li><li class="item-275"><a href="ferramenta.html" >Ferramentas</a></li><li class="item-299"><a href="joomla.html" >Joomla®</a></li><li class="item-283"><a href="padrao.html" >Padrões</a></li><li class="item-114"><a href="off.html" >Off-topic</a></li><li class="item-280"><a href="ui-ux.html" >UI/UX</a></li></ul>
+
+		</div>
+
+			<aside class="moduletable clearfix">
+
+					<h2 class="page-header">Sobre o autor</h2>
+		
+			
+
+<div class="custom clearfix"  >
+	<img src="//cdn.fititnt.org/img/emerson-rocha-luiz.jpg" width="130" height="160" alt="Emerson Rocha Luiz" style="margin:.3em" class="pull-left img-polaroid"/>
+<p><a href="http://www.linkedin.com/pub/emerson-rocha-luiz/2a/3aa/6a6" target="_blank" title="LinkedIn de Emerson Rocha Luiz">Emerson Rocha Luiz</a>, 28 anos, residente de Porto Alegre, é um Web Developer com 9 anos de experiência.</p>
+<p>Além de <a href='https://www.google.com.br/search?q=%22Emerson+Rocha+Luiz%22+AND+%22software+livre%22' target="_blank" title="Pesquisa no Google por Emerson Rocha Luiz mais Software Livre">ativo na comunidade de software livre</a>, costuma ser flexível ao prover <a href="http://www.fititnt.org/profissional/suporte-joomla.html" title="Serviço de consultoria direta e serm intermediários">consultoria</a> para outros desenvolvedores em áreas que domina. <a href="https://www.linkedin.com/in/fititnt" target="_blank">LinkedIn&#8599;</a></p>
+<p>É sócio-fundador na <a href="http://www.alligo.com.br" target="_blank" title="Site da Alligo: projetos web que envolvam front-end, back-end (Joomla), UX, acessibilidade, microdata, semântica...">Alligo</a>, que atende projetos robustos desde o planejamento até o suporte.</p></div>
+
+		</aside>
+
+			<div class="moduletable">
+
+					<h3 class="page-header">Recomendo sobre "Joomla!"</h3>
+		
+			
+
+<div class="custom"  >
+	
+<p><a href="http://www.fititnt.org/joomla/temas-e-extensoes-nao-sao-so-comprar-e-sair-usando.html" target="_blank">Temas e extensões não são 'só comprar e sair usando' </a></p>
+<p><a href="http://www.fititnt.org/extensoes/otimizacao-para-sistemas-de-busca-joomla.html" target="_blank">Joomla puro, URLs perfeitas: melhore sua SEO</a></p>
+<p><a href="http://www.fititnt.org/joomla/usar-ou-nao-um-framework-de-template-joomla.html" target="_blank">Usar ou não um framework de template Joomla ao desenvolver o seu tema?</a></p>
+<p><a href="http://www.fititnt.org/iniciante-joomla.html" target="_blank">Comecou a usar Joomla!. E agora?</a></p>
+<p><a href="http://www.fititnt.org/recuperar-senha-joomla.html" target="_blank">Como recuperar senha Joomla! </a></p>
+<p><a href="http://www.fititnt.org/joomla/padroes-de-programacao.html" target="_blank">Padrões de programação Joomla!</a></p> </div>
+
+		</div>
+
+	
+                        </div>
+                    </div>
+                                <div id="content" class="span9" tabindex="-1">
+                    		<div class="moduletable">
+
+					<h2 class="hidden">Breadcrumbs</h2>
+		
+			
+<ul class="breadcrumb " itemprop="breadcrumb">
+<li class="active"><span class="divider">Você está aqui: </span></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.html" class="pathway" itemprop="url"><span itemprop="title">Inicio</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="divider">/</span><span itemprop="title">Como instalar o Joomla - Método Muito rápido</span></li></ul>
+
+		</div>
+
+	
+                    <div id="system-message-container">
+	</div>
+
+                    <main role="main">
+                    <article class="item-page" itemscope itemtype="http://schema.org/Article">
+		<div class="page-header">
+		<h1> Como instalar o Joomla - Método Muito rápido </h1>
+	</div>
+					
+		<header class="page-header">
+		<h2 itemprop="name">
+															<a href="instalar-joomla-metodo-muito-rapido.html"> Como instalar o Joomla - metodo muito rápido</a>
+									</h2>
+			
+																Escrito por <span itemprop="author"><a href="contato.html" rel="me">Emerson Rocha Luiz</a></span>									</header>
+	
+			<footer class="article-info muted">
+			<dl class="article-info">
+			<dt class="article-info-term">Detalhes</dt>
+
+										<dd>
+					<div class="category-name">
+																			Categoria: <a href="joomla.html">Joomla!</a>											</div>
+				</dd>
+			
+			
+												<dd>
+						<div class="modified">
+							<i class="icon-calendar" itemprop="dateModified"></i> Última atualização: 08 Novembro 2009						</div>
+					</dd>
+													<dd>
+						<div class="create">
+							<i class="icon-calendar" itemprop="dateCreated"></i> Criado: 26 Outubro 2009						</div>
+					</dd>
+				
+										</dl>
+		</footer>
+	
+		
+								<div class="socializeme-r-v"><div class="sm-ttb"><a href="http://twitter.com/share" class="twitter-share-button" data-url="instalar-joomla-metodo-muito-rapido" data-count="vertical" data-lang="pt-BR" data-via="fititnt">Twitter</a></div></div><p><strong>É possivel instalar o Joomla de forma muito rápida, em menos de um minuto? A resposta é: SIM, é possivel. Descobra como lendo este tutorial. </strong>Claro, você também pode usar um daqueles scripts aka &#39;fantásticos&#39; do CPANEL da vida, mas dai não tem graça e você nunca sabe o que vem no pacote ;) </p>
+<p>Antes de qualquer coisa, você deve ter o programa adequado. Caso esteja usando Windows, a melhor na minha opinião é é o putty. Você pode acessar a <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">página oficial com todos os links para download do Putty</a> e fazer download do putty.exe mais recente. Se for Linux, provavelmente qualquer prompt de comando que abrir vai poder fazer isso sem qualquer problema. Não obstante, você pode obter uma lista <a href="http://en.wikipedia.org/wiki/Comparison_of_SSH_clients" target="_blank">completa com comparação de clientes ssh na wikipedia</a>. </p>
+<p>O primeiro comando que deve usar é o <strong>ssh</strong>.  Abra seu seu prompt. Para quem está acostumado com interfaces mais intuitivas e gráficas, pode estranhar um pouco mas, acredite, uma tela em linha de comando dessas faz o que você com sua interface gráfica demoraria para fazer. Basta que você saiba o que está fazendo.</p>
+<p>Ah, e claro, seu servidor deve permitir acesso SSH, Eu pessoalmente não aceito hospedagems para meus sites que não ofereçam esse tipo de acesso, e, não raro cobro mais claro se um cliente tem um host que não oferece esse tipo de comando. Mesmo que tenha lá sua interfaçe administrativa comum de se ver por ai, no caso o CPANEL.</p>
+<p>Para quem não sabe, caso você desconheça um comando ou queira ajuda, basta digitar o nome do comando mais --help. Exemplo</p>
+<p><script type="text/javascript">
+	SyntaxHighlighter.config.clipboardSwf = "plugins/content/CodeCitation/codecitation/scripts/clipboard.swf";
+	SyntaxHighlighter.defaults["auto-links"] = true;
+	SyntaxHighlighter.defaults["collapse"] = false;
+	SyntaxHighlighter.defaults["gutter"] = true;
+	SyntaxHighlighter.defaults["smart-tabs"] = true;
+	SyntaxHighlighter.defaults["tab-size"] = 4;
+	SyntaxHighlighter.defaults["toolbar"] = true;
+	SyntaxHighlighter.defaults["wrap-lines"] = true;	
+	SyntaxHighlighter.all();
+</script><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">ssh --help</pre></div></p>
+<p>Agora faça o acesso ao seu host. Seu host pode ser o número de IP da máquina remota. Então qualquer dominio ou subdomínio que aponte para o IP da máquina remota, serve, mesmo que seja um dominio de outro site que está no mesmo servidor. No meu caso:</p>
+<h3>Como se autenticar no servidor removo via SSH </h3>
+<p><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">ssh fititnt @ webdesign.eng.br # retire espaços vazios entre o usuário e a senha</pre></div></p>
+<p>Aonde fititnt é o seu nome de usuário, e  webdesign.eng.br seu host remoto, que aponta para o IP 69.163.174.45. Neste exemplo tive que colocar espaços adicionais entre o usuário e a senha porque o CMS automaticamente adiciona javascript para impedir spambots, e esse javascript adicional apareceria no exemplo. Mas no seu caso é só remover, e no meu caso apenas <strong>ssh fititnt@webdesign.eng.br</strong>. </p>
+<p>Você recebe uma mensagem pedindo a senha para seu usuário, coloque a senha correta e de enter. Talvez na primeira vez aparecerá uma mensagem perguntando se deseja armazenar uma chave de identificação do servidor remoto e se você realmente acredita que o servidor remoto é mesmo quem ele diz ser. Responda <strong>yes</strong>, ou <strong>sim</strong>, conforme as opções que lhe derem.</p>
+<h3>Como avançar e voltar de diretórios (cd) </h3>
+<p>O comando para fazer isso é o <strong>cd</strong> de &#39;change directory&#39;. Basicamente, o parametro adicional dele indica a localização que você vai atingir, sendo que ponto ponto ( .. ) significa subir um diretório </p>
+<p><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">  #estou em /var/www  cd bancada1/administrator/components  #desceu 3 níveis: /var/www/bancada1/administrator/components  cd ..  # sube um nivel: /var/www/bancada1/administrator  cd ../../bancada2  #subi 2 níveis e entrei em outra pasta: /var/www/bancada2  </pre></div> </p>
+<p>Ok, agora que você já está autenticado, e sabe ir e vir, vá até o diretório em que quer instalar o Joomla. Caso o diretório não exista, use o comando &#39;mkdir nomedodiretório&#39; para criar o diretório, e &#39;rm - R nomedodiretorioaserdeletado&#39; para deletar caso tenha algum anterior e queira apagar. </p>
+<h3>Faça o download do arquivo de instalação do Joomla direto no servidor, sem intermediários ( wget ) </h3>
+<p>Vá até o repositório aonde tem os links diretos para download das versões do Joomla, que pode ser acessado através de alguns cliques da página inicial do <a href="http://www.joomla.org" target="_blank">Joomla.org</a> ou direto do <a href="http://forge.joomla.org/gf/project/joomla/frs/" target="_blank">Joomla Forge</a>. Neste momento você pode escolher entre uma instalação full do Joomla, ou um pacote de atualização. Na práica, se você baixar sempre os pacotes full, mesmo que for atualizar, isso não vai fazer qualquer diferença, so vai consumir um pouco mais de banda. Copie o endereço do pacote a ser obtido. No meu caso como a versão mais atual do joomla é a 1.5.14: </p>
+<p><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">wget http://forge.joomla.org/gf/download/frsrelease/10785/42654/Joomla_1.5.14-Stable-Full_Package.tar.gz</pre></div></p>
+<p>Ao digitar isso, será feito o download direto para o diretório atual, de modo bem mais rápido do que você baixando para o seu computador e depois fazendo o upload para o servidor do arquivo compactado ou ( pior ainda) arquivo por arquivo. Uma díca é que em geral pode clicar com o botão direto do mouse e colar o que estiver na área de transferência, no caso, a URL </p>
+<h3>Descompacte o arquivo (tar)</h3>
+<p>Depois de feito o download, basta usar o comando certo acrescentado do nome do arquivo para fazer o download. Eu pessoalmente prefiro trabalhar com arquivos tar.gz porque tem uma ótima compressão ( melhor que zip ) para arquivos como os usados em sites, além de tar.gz suportar arquovos MUITO grandes, e, apensar de comprimir um pouco menos que tar.bz2, o tar.bz2 consome mais recursos para compactar e descompactar</p>
+<p><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">tar -vzxf Joomla_1.5.14-Stable-Full_Package.tar.gz</pre></div></p>
+<p>Onde Joomla_1.5.14-Stable-Full_Package.tar.gz é o nome do seu arquivo a ser descompactado</p>
+<p>Acesse via navegador e faça o processo normal de inserir os dados do seu site</p>
+<p>Com os arquivos descompactados no seu servidor, agora é so fazer o que está acostumado. Next, next, coloca os dados, ok e afins.</p>
+<h3>Remova o diretório installation (rm -r) </h3>
+<p>Uma coisa que o CMS Joomla sempre solicita é remover o diretório installation. De forma simples e rápida:</p>
+<p><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">rm -r installation </pre></div> </p>
+<p>Pronto!</p>
+<h3>Considerações finais</h3>
+<p>Resumindo, o tutorial é simples assim. Na prática dá pra se instalar ou atualizar um joomla em menos de um minuto, mas pode demorar mais tempo se você ainda tem que criar os bancos de dados ou tem que fazer algum outro detalhe antes. Em um próximo tutorial eu vou explicar um pouco melhor sobre comandos que podem ser dados, e possiveis problemas e soluções que você poderia encontrar, citando inclusíve como usar o chown e o chmod que são bem úteis. </p> 
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a href="/joomla/usuarios-mentem.html" rel="prev">&lt; Ant</a>
+	</li>
+	<li class="next">
+		<a href="/joomla/chat-com-joomleiros-do-mundo-inteiro-via-irc.html" rel="next">Próx &gt;</a>
+	</li>
+</ul>
+						<div id="disqus_thread"></div><script type="text/javascript">var disqus_shortname = 'fititnt';var disqus_developer = 0;var disqus_identifier = 'd31df08f5a_id36';(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> </article>
+
+                    </main>
+                    
+                </div>
+                            </div>
+            <nav class="navegacao-complementar">
+              <h2 class="screen-reader-only">Navegação Complementar</h2>
+              <div class="row-fluid">
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Profissional</h2>
+		
+			<ul class="nav menu">
+<li class="item-277"><a href="curso.html" >Cursos e Treinamentos</a></li><li class="item-127"><a href="/profissional/suporte-joomla.html" >Consutoria em Joomla</a></li><li class="item-347"><a href="/profissional/pericia-forense-digital-websites-invadidos-hackeados.html" >Perícia Forense Digital</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable_menu">
+
+					<h2 class="page-header">Veja Também</h2>
+		
+			<ul class="nav menu">
+<li class="item-279"><a href="palestra.html" >Palestras</a></li><li class="item-266"><a href="podcast.html" >Podcasts</a></li><li class="item-273"><a href="https://github.com/fititnt" >Github</a></li><li class="item-100 parent"><a href="bash.html" >Bash</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Joomla, JPlatform e Afins</h2>
+		
+			<ul class="nav menu">
+<li class="item-165"><a href="joomleiro.html" >O que é &quot;Joomleiro&quot;?</a></li><li class="item-162"><a href="iniciante-joomla.html" >Dicas para Iniciantes</a></li><li class="item-163"><a href="designer-joomla.html" >Dicas para Designers</a></li><li class="item-164"><a href="programador-joomla.html" >Dicas para Programadores</a></li><li class="item-296"><a href="http://forum.joomla.org/viewforum.php?f=23" >Suporte Gratuito</a></li><li class="item-297"><a href="/profissional/suporte-joomla.html" >Suporte Pago</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Recomendo</h2>
+		
+			<ul class="nav menu">
+<li class="item-46"><a href="http://danielcorrea.me/" >Daniel Correa</a></li><li class="item-304"><a href="http://www.vivendoporai.com.br/" >Juliana Fernandes</a></li><li class="item-44"><a href="http://ronildo.com.br/blog/index.php" >Ronildo</a></li></ul>
+
+		</div>
+
+	
+                </div>
+              </div>
+            </nav>
+            <footer class="footer" role="contentinfo">
+              Emerson Rocha Luiz &copy; 2014<br />
+              Site de Web Developer focado em boas práticas. Programação, cursos, treinamentos in company, consutoria e suporte avançado.<br />
+              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=instalar-joomla-metodo-muito-rapido" target="_blank" title="HTML5 Valid" rel="nofollow">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( -->
+            </footer>
+        </div>
+    </div>
+        <div>
+            <div class="container">
+                <hr />
+                
+                <p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
+                <a href="http://www.w3.org/html/logo" target="_blank"><img src="data:image/png;base64,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" alt="HTML5 Valid" width="261" height="64"></a></p>
+            </div>
+        </div>
+        
+        <noscript>Javascript desativado. E daí? Faz tanta diferença para você neste site?</noscript>
+        <script src="/templates/fititntv3/js/fititnt6.js"></script>
+    </body>
+</html>

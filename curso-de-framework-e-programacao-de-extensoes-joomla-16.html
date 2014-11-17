@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="index.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="joomla 1.6, curso, apostila, video-aula, aula, grátis, template, extensão, programação, atualização" />
+  <meta name="author" content="Emerson Rocha Luiz" />
+  <meta name="description" content="Curso de Framework e Programação de Componentes, Módulos, Plugins e Templates em Joomla 1.6 e Joomla 1.6, presencial em Porto Alegre" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Curso de Framework e Programação de Extensões Joomla 1.6</title>
+  <link href="curso-de-framework-e-programacao-de-extensoes-joomla-16.html" rel="canonical" />
+  <link href="/templates/fititntv3/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/fititntv3/css/template4.css" type="text/css" />
+  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				
+			});function do_nothing() { return; }jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+  </script>
+  <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  <link href='https://plus.google.com/103165086227320151428' rel='author'/>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-478966-13']);
+    _gaq.push(['_setDomainName', 'www.fititnt.org']);
+    _gaq.push(['_addIgnoredRef', 'www.fititnt.org']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://pw.alligo.com.br/";
+      _paq.push(["setTrackerUrl", u+"piwik.php"]);
+      _paq.push(["setSiteId", "1"]);
+      var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+      g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+</head>
+<body class="site com_content view-article no-layout no-task itemid-154" itemscope itemtype="http://schema.org/WebPage">
+	<div id="skip">
+		<a href="#content">Pular para conteúdo</a>
+	</div>
+    <div class="body">
+        <div class="container">
+            <header class="header">
+                <div class="header-inner clearfix">
+                    <h1 class="brand pull-left">
+                      <a href="index.html">
+                        <img alt="Programador &amp; consultor focado em Web Standards .::. Joomla!, PHP, Javascript, UI/UX" title="Voltar à página inicial" width="150" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABACAMAAADPuH7iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8r+/2UBA/O/vzxAQ0iAg7J+f9c/P1jAw32Bg6Y+P76+v4nBw+d/f3FBQ5oCAzAAA////nO5BRgAAABF0Uk5T/////////////////////wAlrZliAAABkklEQVR42uzZ63aDIAwAYIKAeCnw/k87J7XDoDJYLZyz5FerNHxWBTHMNRmMWMT63yzFGFNtsfgAdg3/1axx+eO1BbuXNXbWhqzw83GYtYW5lSWtbZDFuyZZg02xYkS0JX0kvzzAF+t5tT/G5VZsiOXP4cOd91GF5TOGQxYeIGJWNEDcxfrjBU4sYhErCKn7ZW8HB5P7EcviiPowuAWLkuEW4NP/tDDB7CYkFqHcn2IpgXbzFliqw/sFr8+KVdb21VmTVwm9TFX6dTZlgnVyE71jqmbBv7N1xZ4wUTZAvJc1BWuG3m8a67N2wx2LpJVYsB89e7yxEmveswZ8cdVhPfAKIpX7MyyJWLwN1pya0+uwXJMsIBaxiEUsYhGLWMRqkaXTrLmUpUtYQ/QAHLH86rnn2SycO4O1rWIEAKhjFmzrL4Api4VzZ7Bcd/UOApdCIIuFc+ewTJIVFI4yWaactb07OGcFZbZMFsqdw3Jcp1huFGUslDuzdMq/6ymM8YsmShojSwrLYW6q7BOLWC3ElwADANs3QeEEqCaUAAAAAElFTkSuQmCC"/>
+                      </a>
+                    </h1>
+                    <div class="header-search pull-right" role="search">
+<form id="mod-finder-searchform" action="/pesquisar.html" method="get" class="form-search">
+	<div class="finder">
+		<label for="mod-finder-searchword" class="finder hidden">Pesquisar no site</label><br /><input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="20" value="" placeholder="Faça uma pesquisa completa no site agora"/><button class="btn btn-primary hasTooltip  finder" type="submit" title="Ir">Ir</button>
+					</div>
+</form>
+
+</div>
+
+                </div>
+            </header>
+                            <div id="menu-principal" class="navigation" role="navigation">
+                    		<nav class="moduletable">
+
+					<h2 class="hidden">Navegação principal</h2>
+		
+			<ul class="nav menu nav-pills">
+<li class="item-159"><a href="index.html" >Início</a></li><li class="item-160"><a href="sobre.html" >Sobre o Autor</a></li><li class="item-298"><a href="/profissional/suporte-joomla.html" >Consultoria</a></li><li class="item-309"><a href="curso.html" >Cursos &amp; Treinamentos</a></li><li class="item-167"><a href="contato.html" >Contato</a></li></ul>
+
+		</nav>
+
+	
+                </div>
+                        
+            <div class="row-fluid">
+                                    <div id="sidebar" class="span3">
+                        <div class="sidebar-nav" role="navigation">
+                            		<div class="moduletable">
+
+					<h2 class="page-header">Alguns tópicos gerais</h2>
+		
+			<ul class="nav menu">
+<li class="item-278"><a href="comunidade.html" >Comunidade Software Livre</a></li><li class="item-311"><a href="frontend.html" >Frontend (HTML, CSS, JS)</a></li><li class="item-275"><a href="ferramenta.html" >Ferramentas</a></li><li class="item-299"><a href="joomla.html" >Joomla®</a></li><li class="item-283"><a href="padrao.html" >Padrões</a></li><li class="item-114"><a href="off.html" >Off-topic</a></li><li class="item-280"><a href="ui-ux.html" >UI/UX</a></li></ul>
+
+		</div>
+
+			<aside class="moduletable clearfix">
+
+					<h2 class="page-header">Sobre o autor</h2>
+		
+			
+
+<div class="custom clearfix"  >
+	<img src="//cdn.fititnt.org/img/emerson-rocha-luiz.jpg" width="130" height="160" alt="Emerson Rocha Luiz" style="margin:.3em" class="pull-left img-polaroid"/>
+<p><a href="http://www.linkedin.com/pub/emerson-rocha-luiz/2a/3aa/6a6" target="_blank" title="LinkedIn de Emerson Rocha Luiz">Emerson Rocha Luiz</a>, 28 anos, residente de Porto Alegre, é um Web Developer com 9 anos de experiência.</p>
+<p>Além de <a href='https://www.google.com.br/search?q=%22Emerson+Rocha+Luiz%22+AND+%22software+livre%22' target="_blank" title="Pesquisa no Google por Emerson Rocha Luiz mais Software Livre">ativo na comunidade de software livre</a>, costuma ser flexível ao prover <a href="http://www.fititnt.org/profissional/suporte-joomla.html" title="Serviço de consultoria direta e serm intermediários">consultoria</a> para outros desenvolvedores em áreas que domina. <a href="https://www.linkedin.com/in/fititnt" target="_blank">LinkedIn&#8599;</a></p>
+<p>É sócio-fundador na <a href="http://www.alligo.com.br" target="_blank" title="Site da Alligo: projetos web que envolvam front-end, back-end (Joomla), UX, acessibilidade, microdata, semântica...">Alligo</a>, que atende projetos robustos desde o planejamento até o suporte.</p></div>
+
+		</aside>
+
+			<div class="moduletable">
+
+					<h3 class="page-header">Recomendo sobre "Joomla!"</h3>
+		
+			
+
+<div class="custom"  >
+	
+<p><a href="http://www.fititnt.org/joomla/temas-e-extensoes-nao-sao-so-comprar-e-sair-usando.html" target="_blank">Temas e extensões não são 'só comprar e sair usando' </a></p>
+<p><a href="http://www.fititnt.org/extensoes/otimizacao-para-sistemas-de-busca-joomla.html" target="_blank">Joomla puro, URLs perfeitas: melhore sua SEO</a></p>
+<p><a href="http://www.fititnt.org/joomla/usar-ou-nao-um-framework-de-template-joomla.html" target="_blank">Usar ou não um framework de template Joomla ao desenvolver o seu tema?</a></p>
+<p><a href="http://www.fititnt.org/iniciante-joomla.html" target="_blank">Comecou a usar Joomla!. E agora?</a></p>
+<p><a href="http://www.fititnt.org/recuperar-senha-joomla.html" target="_blank">Como recuperar senha Joomla! </a></p>
+<p><a href="http://www.fititnt.org/joomla/padroes-de-programacao.html" target="_blank">Padrões de programação Joomla!</a></p> </div>
+
+		</div>
+
+	
+                        </div>
+                    </div>
+                                <div id="content" class="span9" tabindex="-1">
+                    		<div class="moduletable">
+
+					<h2 class="hidden">Breadcrumbs</h2>
+		
+			
+<ul class="breadcrumb " itemprop="breadcrumb">
+<li class="active"><span class="divider">Você está aqui: </span></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.html" class="pathway" itemprop="url"><span itemprop="title">Inicio</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="divider">/</span><span itemprop="title">Curso de Framework e Programação de Extensões Joomla 1.6</span></li></ul>
+
+		</div>
+
+	
+                    <div id="system-message-container">
+	</div>
+
+                    <main role="main">
+                    <article class="item-page" itemscope itemtype="http://schema.org/Article">
+		<div class="page-header">
+		<h1> Curso de Framework e Programação de Extensões Joomla 1.6 </h1>
+	</div>
+					
+		<header class="page-header">
+		<h2 itemprop="name">
+															<a href="curso-de-framework-e-programacao-de-extensoes-joomla-16.html"> Curso de Framework e Programação de Extensões Joomla 1.6</a>
+									</h2>
+			
+																Escrito por <span itemprop="author"><a href="contato.html" rel="me">Emerson Rocha Luiz</a></span>									</header>
+	
+			<footer class="article-info muted">
+			<dl class="article-info">
+			<dt class="article-info-term">Detalhes</dt>
+
+										<dd>
+					<div class="category-name">
+																			Categoria: <a href="curso.html">Curso</a>											</div>
+				</dd>
+			
+			
+												<dd>
+						<div class="modified">
+							<i class="icon-calendar" itemprop="dateModified"></i> Última atualização: 15 Março 2013						</div>
+					</dd>
+													<dd>
+						<div class="create">
+							<i class="icon-calendar" itemprop="dateCreated"></i> Criado: 18 Janeiro 2011						</div>
+					</dd>
+				
+										</dl>
+		</footer>
+	
+		
+								<div class="socializeme-r-v"><div class="sm-ttb"><a href="http://twitter.com/share" class="twitter-share-button" data-url="curso-de-framework-e-programacao-de-extensoes-joomla-16" data-count="vertical" data-lang="pt-BR" data-via="fititnt">Twitter</a></div></div><p>Este é o  anuncio do curso de &ldquo;Framework e Programação de Extensões Joomla!&rdquo;. Se você  está procurando pelo &ldquo;<a href="http://www.fititnt.org/comunidade/curso-gratuito-de-joomla-16-presencial-em-porto-alegre-fev-2011.html" target="_blank">Curso de Administração do CMS Joomla! 1.6</a>&rdquo;, que será  gratuito e fora do horário comercial, visite o outro anúncio.</p>
+ 
+<div class="alert alert-info">
+  <h3>Saiba o que está contratando</h3>
+  <p>Este é um artigo referente a um serviço profissional que presto como consultor independente, ou, quando aplicável, como <a href="http://www.alligo.com.br" target="_blank">empresa</a>. Antes de entrar em contato, recomendo que <a href="http://www.fititnt.org/sobre.html" target="blank">leia mais sobre quem sou para ficar mais seguro sobre sua escolha</a>.</p>
+</div>
+<p>Ministrarei em Porto Alegre de 28 de fevereiro a 4 de março o curso &ldquo;<strong>Framework e Programação de Extensões Joomla</strong>&rdquo;, focado em Joomla 1.6, com compatibilidade para Joomla 1.5. Observe que hoje,  não existem cursos abertos publicamente no Brasil que ensinem a programar  extensões ou que se estendam a questões de segurança em sites Joomla no  nível a que este se propõe. Quanto  a próxima data de realização deste curso, <a href="#faq">leia a FAQ</a>.</p>
+<p>
+  O foco deste curso é passar um conhecimento mínimo para ser  um bom administrador do CMS Joomla! bem como, através do Framework  Joomla! e a lógica de Padrão MVC, criar condições para gerar suas próprias  extensões e saber editar de forma consciente extensões de terceiros que sejam código aberto.</p>
+<p>
+  Outro ponto  significativo é que, mesmo que você não se foque em mais tarde se tornar um  desenvolvedor Joomla!, quer seja por decisão própria ou por decisão da entidade  que representa em não usar esse CMS,boa  parte da lógica do curso é comum a qualquer tipo desenvolvimento WEB. De certa forma, o objetivo do curso é mostrar  alguns problemas existentes, discutir soluções puras nas linguagens nativas e,  então, apresentar o CMS e Framework Joomla! como um meio de otimizar seu tempo  de desenvolvimento e garantir maior segurança no seu projeto.<br />
+</p>
+<h4>Publico alvo principal (gratuito)</h4>
+<ul>
+  <li>Gerentes  de TI ou equivalentes de Universidades Federais e Estaduais públicas, em especial da UFRGS e a  UERGS;</li>
+  <li>Gerentes  de TI ou equivalentes do governo, em especial de área ligada a saúde ou de policiamento.</li>
+</ul>
+<p>O numero de  vagas é restrito, e para este público  alvo é totalmente sem custos, e haverá certificado de participação.</p>
+<p>
+  Explicitamente  recomendo que leia a FAQ &ldquo;<a href="#conhecimento-em-programacao-requerido">O quanto eu devo saber de programação para fazer este  curso?</a>&rdquo; caso você já não seja um programador PHP.<br />
+</p>
+<h4>Público alvo secundário (pagante)</h4>
+<ul>
+  <li>Profissionais que já são programadores (preferencialmente em PHP), e que tem querem conhecer o desenvolvimento de soluções próprias com o Framework e CMS Joomla!, sem necessitar experiência no desenvolvimento de soluções próprias em qualquer CMS.</li>
+  <li>Profissionais que tem uma base sólida do funcionamento do CMS Joomla, conhecimento razoável em lógica de programação e que está disposto a, antes de ir ao curso, estudar um mínimo de PHP.</li>
+</ul>
+<p>Para o público alvo pagante, será limitado a 8  pessoas, e serão aceitos conforme confirmação de inscrição. <br />
+  Reitero, recomendo que leia a FAQ &ldquo;<a href="#conhecimento-em-programacao-requerido">O quanto eu devo  saber de programação para fazer este curso?</a>&rdquo; caso você já não seja um  programador PHP.</p>
+<h3>Estrutura do curso</h3>
+<p>A estrutura  básica do curso é formada pelos conteúdos abaixo:</p>
+<ul>
+  <li><a href="#administracao-do-cms-joomla">Administração do CMS Joomla!</a>;</li>
+  <li><a href="#aplicativos-linguagens-e-conceitos-pertinentes-ao-desenvolvimento-de-extensoes-joomla">Aplicativos, linguagens e conceitos  pertinentes ao desenvolvimento de extensões Joomla!</a>;</li>
+  <li><a href="framework-joomla-1.6-e-1.5.html">Framework Joomla!</a>;</li>
+  <li><a href="#dezenvolvimento-de-extensoes-joomla">Desenvolvimento de extensões Joomla!</a>;</li>
+  <li><a href="#laboratorio-de-criacao-de-extensoes-joomla">Laboratório</a>.</li>
+</ul>
+<p>Estes conteúdos  não são rigorosamente fixos, abrindo margem para um assunto de um dos conteúdos ser reforçado ou ministrado com  maior ênfase ao ser necessária sua  utilização dentro de outro tópico. Tampouco  terão uma divisão uniforme de tempo. No entanto, os três últimos temas  serão ministrados de três a até quatro dos cinco dias previstos de curso. Cada  dia terá pelo menos 8 horas de aula teórica e prática, com um computador por  pessoa. Caso você já tenha seu notebook, poderá trazê-lo se preferir.</p>
+<h3 id="administracao-do-cms-joomla">Administração do CMS  Joomla! 1.6 e 1.5</h3>
+<p>Antes de partir  para programação, o ponto de partida do curso é garantir um conhecimento padrão  mínimo do CMS Joomla! a todos os participantes, de modo que o participantetenha condições de ser um bom usuário e gerente de sites. O conteúdo  deste dia será semelhante ao do &ldquo;<a href="http://www.fititnt.org/comunidade/curso-gratuito-de-joomla-16-presencial-em-porto-alegre-fev-2011.html" title="Curso CMS Joomla 1.6" target="_blank">Curso de Administração do CMS Joomla! 1.6</a>&rdquo;,  porém apresentado com mais tempo,  visto que parte dos temas deste outro curso focado apenas na administração  serão explicados com muito mais ênfase nos próximos tópicos deste de  programação e Framework Joomla!.<br />
+</p>
+<p>Já no  primeiro dia, você também criará seu primeiro componente, que lhe será útil:  ele será capaz de pegar dados de um formulário, executar, e mostrar o  resultado. Será o <strong>terminal de comando J!</strong>,  feito por você para você.</p>
+<h3 id="aplicativos-linguagens-e-conceitos-pertinentes-ao-desenvolvimento-de-extensoes-joomla">Aplicativos, linguagens e  conceitos pertinentes ao desenvolvimento de extensões</h3>
+<p>De forma  prática, com relação a linguagens e frameworks que serão discutidos, serão abordados:</p>
+<ol start="1" type="1">
+  <li><a href="http://en.wikipedia.org/wiki/PHP" target="_blank">PHP 5+</a>;</li>
+  <li><a href="http://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a> (<a href="http://en.wikipedia.org/wiki/MySQL" target="_blank">MySQL 5+</a>);</li>
+  <li><a href="http://en.wikipedia.org/wiki/ECMAScript" target="_blank">Javascript</a>, e <a href="http://mootools.net/" target="_blank">Framework: Mootools 1.3</a>;</li>
+  <li><a href="http://en.wikipedia.org/wiki/CSS" target="_blank">CSS 2</a> (puro, sem foco em frameworks);</li>
+  <li><a href="http://en.wikipedia.org/wiki/HTML#Version_history_of_the_standard" target="_blank">HTML 4</a>;</li>
+</ol>
+<p>A versão  <a href="http://en.wikipedia.org/wiki/HTML5" target="_blank">HTML 5</a> será pouco discutida em função de não estar completamente implementada  nos navegadores atuais. No entanto, também pensando nos Designers, será  apresentando o tema Beez do Joomla 1.6 que é em HTML 5 e via Javascript torna  os navegadores atuais aptos a emular HTML 5.<br />
+  Além disso,  alguns conceitos não exclusivos ao desenvolvimento em Joomla, e em maior ou  menor grau serão também abordados no curso</p>
+<ul>
+  <li><a href="http://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller" target="_blank">Arquitetura  MVC</a> (Model-View-Controler);</li>
+  <li>Banco de Dados;</li>
+  <li><a href="http://en.wikipedia.org/wiki/Nested_set_model" target="_blank">Nested Categories</a>;</li>
+  <li>Otimização para sistemas de busca;</li>
+  <li><a href="http://en.wikipedia.org/wiki/AJAX" target="_blank">AJAX</a>;</li>
+  <li>Ataques comuns a sites (<a href="http://en.wikipedia.org/wiki/SQL_Injection" target="_blank">SQL Injection</a>, <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">Cross-site request forgery</a>, <a href="http://en.wikipedia.org/wiki/Arbitrary_code_execution" target="_blank">Remote Code Execution</a>);</li>
+</ul>
+<p>Dentro os  programas usados durante o curso, os únicos que são imprescindíveis são o MySQL Workbench e o Navegador Firefox com a extensão Firebug e a Web Developer. Quanto ao editor de código fonte, será usado o Netbeans/Eclipse/Notepad++. <br />
+  Observe que  as informações passadas nesta parte do curso são genéricas e não são usadas  apenas no desenvolvimento de extensões com Joomla!, porém seu estudo será  voltado para este objetivo. Além disso alguns dos exemplos práticos serão  ligados ao Joomla!, o que de certa forma antecipa parte do conteúdo dos tópicos  seguintes.</p>
+<h3 id="framework-joomla-1.6-e-1.5">Framework Joomla! 1.6 e  1.5</h3>
+<p>O Framework  Joomla! 1.6 será apresentando, também salientando as diferenças do Joomla! 1.5,  de modo que mesmo os usuários que vão programar em 1.5 não tenham problemas. <br />
+  O tempo  empregado para explicar cada função ou grupo de funções será proporcional a  dificuldade de uso e a freqüência de uso da função, considerado um programador comum  de extensões.<br />
+  Assim como  o desenvolvimento de extensões, esta parte do curso será a que tomará uma das  maiores cargas horárias. Ela é teórica e prática ao mesmo tempo: primeiro  saberá o que cada função ou grupo de funções semelhantes, e tanto quanto  possível você poderá usar seu terminal  de comando J! para testar em tempo real o que vai apreender.<br />
+  Ainda que o  foco seja o uso do Framework Joomla!, será explicado como acrescentar outros  frameworks no CMS Joomla.</p>
+<h3 id="dezenvolvimento-de-extensoes-joomla">Desenvolvimento de  extensões</h3>
+<p>Nesta parte  do curso, o aluno já sabe como o CMS Joomla! funciona, como usar o Framework  Joomla! entre outros conceitos básicos.  Com isso, está habilitado a criar  efetivamente extensões.<br />
+  Questões  como &ldquo;o que deve ser feito para converter ou integrar minha aplicação externa  ao Joomla!&rdquo; serão respondidas durante esta etapa do curso, e reforçadas  laboratório em caso de dúvidas.<br />
+  Será  abordado o uso prático de rotinas comuns (e também de algumas não tão comuns)  em extensões, explicitamente explicadas detalhadamente conforme a pertinência  ou então apenas com apresentação de código como exemplo.</p>
+<h4>Criação de componentes</h4>
+<p>Será  explicado como criar um componente Joomla! a partir de uma estrutura mínima,  como suporte a compreensão orientada da a lógica de implementação do padrão  MVC, que tende a gerar dúvidas, de modo semelhante ao que aconteceria no mundo  real de um desenvolvedor de extensões.<br />
+  Dentro do  tópico de Desenvolvimento de extensões, será a parte que tomará o maior tempo,  visto sua importância e complexibilidade.</p>
+<h4>Criação de módulos</h4>
+<p>Questões específicas  de uso e implementação de módulos serão apresentadas.<br />
+  Comparado a  compontentes, plugins e templates, os módulos são os mais simples. Por isso  naturalmente vão exigir menos tempo de explicação.</p>
+<h4>Criação de plugins</h4>
+<p>Assim como  apresentado logo no início desta etapa de criação de extensões, os plugins  Joomla! tem características bem singulares em relação a componentes, módulos e  templates. Também como ponto adicional, serão especificadas as diferenças entre os  tipos de plugins, a citar:</p>
+<ul>
+  <li><strong>Authentication (J! 1.5 e J! 1.6)</strong></li>
+  <li><strong>Content (J! 1.5 e J! 1.6)</strong></li>
+  <li><strong>Editors (J! 1.5 e J! 1.6)</strong></li>
+  <li><strong>Editors-xtd (J! 1.5 e J! 1.6)</strong></li>
+  <li><strong>Extension (J! 1.6)</strong></li>
+  <li><strong>Search (J! 1.5 e J! 1.6)</strong></li>
+  <li><strong>System (J! 1.5 e J! 1.6)</strong></li>
+  <li><strong>User (J! 1.5 e J! 1.6)</strong></li>
+</ul>
+<p>Explicitamente,  não será abordado o tipo de plugin <strong>xmlrpc</strong>,  que está em desuso na versão 1.6 e que, na prática, foi pouco explorado desde  sua idealização com o Joomla! 1.5.</p>
+<h4>Criação de templates</h4>
+<p>Ainda que  criação de templates mereçam um curso inteiramente específico – design,  usabilidade e programação HTML/CSS com ou sem suporte a algum framework que  facilite a construção de templates – este curso irá explicar o básico de  criação de templates, de modo que dependa de você em especial a habilidade de  design e outros conceitos voltados nesta área já pré-existentes ou por serem  apreendidos em outros cursos, não necessariamente voltados ao Joomla!.<br />
+
+  Pelo  contexto geral desde curso ser focado em programação e framework, você terá  mais familiaridade com conceitos e edições que tipicamente podem representar maiores  dificuldades, como no caso do template overides.<br />
+  Quanto a <a href="#cursos-de-como-fazer-template-joomla-que-recomento">cursos específicos desta área de desenvolvimento de extensões que fortemente recomendo</a>, leia a <a href="#faq">FAQ</a>.</p>
+<h3 id="laboratorio-de-criacao-de-extensoes-joomla">Laboratório</h3>
+<h4> Pré-laboratório ou o &ldquo;Brainstorming de algoritmos  de extensões&rdquo;</h4>
+<p>Baseado no  potencial incrível do Framework Joomla!, e com (ou sem!) o CMS Joomla! como  base, todos os alunos são convidados a imaginar como seria para desenvolver um  projeto que atenda as necessidades que são realizadas por alguma outra solução  mais específica, ou então para resolver um problema ainda sem resposta. Isto  vai desde a necessidade de um aluno específico que quer fazer no laboratório, a  até mesmo criar um &ldquo;Orkut&rdquo;, e como é, essencialmente, um mapa mental desenhado,  com maior ou menor detalhamento, o tempo real empregado em cada projeto é  pequeno.<br />
+</p>
+<p>Como será  algo envolvendo todos os alunos, em torno de 16 pessoas, maior parte  programador ou próximo disso e com diferentes experiências e práticas, a  tendência de prever problemas que apareceriam a cada novo passo e propor  soluções é bem interessante. Neste ponto, você terá noção real do potencial do  que poderia ser feito, dependendo praticamente só de quanto tempo estaria  disposto a programar algo específico.<br />
+</p>
+<p>Algo que  vai ser aproveitado para comentar nesta parte do curso, é a relação entre o que  o cliente acha que quer, o que ele realmente quer, e o que você idealiza que  vai ser entregue, e o que seria entregue. Mais do que apenas saber programar, é  importante ter uma noção de que nem tudo sai como esperado, e ao saber disso e  fazer uma projeção de horas e orçamento mais real, tanto você quanto possíveis  clientes ficariam menos estressados.<br />
+</p>
+<p>Abaixo,  segue uma lista de alguns <u>conceitos teóricos</u> que, conforme a preferência  dos presentes, serão abordados do ponto de vista de programação em Joomla!.  Observe que, em especial os que dependem de outras tecnologias e lógicas de  implementação, dependem que você apreenda conceitos que não terão sido  explicados neste curso, logo a parte abordada aqui será do ponto de vista de como  implementar programação em Joomla.</p>
+<ul>
+  <li>Site com interface totalmente em Ajax, sem recarregar a página;</li>
+  <li>Site totalmente em Flash porém administradovia Joomla!;</li>
+  <li>Troca de informações de pagamento entre sites, com retorno, estilo Paypal, Pagseguro, Moip, e outros;</li>
+  <li>Projeto estilo Marketing Multi-Nível (quem indica mais ganha mais pontos);</li>
+  <li>Identificar nagevador e gerar no HTML o CSS específico para cada tipo e versão de navegador;</li>
+  <li>Encurtador e redirecionador de URL, estilo bit.ly;</li>
+  <li>Redirecionador de URLs com propaganda</li>
+  <li>Componente que gera certificados em PDF com numero de autenticação via seu site.</li>
+</ul>
+<h4>Laboratório do curso: suas  idéias em prática!</h4>
+<p>Pelo menos  no último dia de curso, talvez desde parte do quarto dia, você  será convidado a pôr em prática as idéias que lhe agradarem do &ldquo;Brainstorming  de algoritmos de extensões&rdquo;, ou então alguma outra idéia na qual você esteja  seguro de como realizá-la e que não chegou a propor no dia anterior. <br />
+</p>
+<p>Será  estimulado que haja a formação de duplas ou grupos, conforme o interesse em  desenvolver os projetos, também levando em consideração aqueles que se sentem  menos seguros ao programar. <br />
+</p>
+<p>Se por  exemplo um projeto abranger três alunos, o ideal seria em um primeiro momento,  todos estarem junto na modelação e formação das tabelas do banco de dados do  componente, e então haver alguma divisão de tarefas conforme as preferências de  cada um. Alguém poderia ficar responsável pela criação do frontend (parte da  área pública) do componente principal, outro programador com o backend (área  administrativa) e o terceiro aluno do grupo ficar vendo possíveis módulos e  plugins que seriam necessários, e assim que o primeiro terminar, ou ajudar os  demais, ou então partir para outro projeto. <br />
+</p>
+<p>Importantíssimo  ressaltar: todo o código fonte criado no curso deverá ser disponibilizado para  os demais participantes do curso. Ainda assim, você ou as pessoas que fizerem o  projeto com você podem requerer direitos de cópia e definir a licença e se vão  ou não liberar para pessoas externas o código criado.</p>
+<h3>O aluno que concluir este  curso:</h3>
+<ul>
+  <li>Será um bom Administrador de CMS Joomla! versões 1.6 e 1.5 , conhecimento esse que será consolidado com alguma prática posterior ao curso.</li>
+  <li>Saberá criar componentes, módulos, plugins e templates Joomla! e terá facilidade ao editar extensões de terceiros.</li>
+  <li>Se já usa o CMS, passará a usar o mínimo de extensões possíveis em sites, e, dentre as extensões que escolher, vai olhar o código fonte antes e levar muito em conta se são bem escritas. </li>
+  <li>Estará ciente dos principais tipos de ataques a sites da WEB, e os específicos a sites Joomla!, e terá condições de tomar medidas preventivas para blindar seu sites contra ataques que vão além de só mantê-lo atualizado.</li>
+  <li>Terá, implicitamente, melhorado seus conceitos de PHP e de lógica em MVC. Provavelmente será mais fácil lidar com outros CMSs ou mesmo desenvolver do zero ou alterar outras aplicações que usem outro Framework que seja a lógica MVC depois de algumas horas percebendo as diferenças.</li>
+  <li>Terá noções essencialmente úteis de HTML4, CSS, Javascript/Mootools para serem usados em qualquer tipo de site.</li>
+</ul>
+<h3 id="faq">FAQ</h3>
+<h3>Como surgiu a ideia do  curso?</h3>
+<p>O Objetivo  principal do curso é deixar claro, em especial de instituições governamentais,  do potencial que o CMS Joomla! tem, e, assim como a versão do curso de  Administração do CMS Joomla!, desmistificar alguns dogmas que se criaram em  função de más experiências com usuários do CMS que por imperícia, desconhecimento,  ou  mais comumente displicência, de um  usuário de algum Joomla!. </p>
+<h3>Por que o público alvo são  gestores de TI de instituições de ensino público e do governo?</h3>
+<p>Situação  que acredito que não é comum somente o Rio Grande do Sul, é que os setores de  TI tanto de departamentos de Universidades ou de departamentos do Governo do  Estado não têm um incentivo tanto em pessoal de TI, como em especialização  adequada. Entidades como essas tem um grande numero de usuários e, mais do que  apenas um CMS de internet ou intranet para exibir notícias, tem um potencial  muito grande para benefício real dos atendidos e que poderia ser contemplado  com um bom gerenciamento de informações.<br />
+</p>
+<p>Posso dar  um exemplo pessoal. Alguns anos atrás fui coordenador de gestão do SAMU  Metropolitano de Porto Alegre. Um dos problemas do Estado era gerenciamento e análise  estatística de dados. Sabia-se que, por exemplo, relacionar quantidade e o tipo  de chamado de socorro que causaram chamados ao SAMU, poderiam servir para  concluir situações úteis como problemas com criminalidade maior em uma região,  aumento de acidentes em certas ruas e outros mais. Com dados como estes, e  também considerando que diferente do que com registros de queixa na polícia em  que pessoas tem a opção de não dar, no SAMU, alguém que leva um tiro, vai passar  pelo SAMU, com provas estatísticas de aonde o problema está acontecendo, não  seria complicado  conversar com outros  setores do governo e trabalhar para reduzir o número de clientes do SAMU. Além desse apoio a setores internos, havia, por exemplo, outros detalhes que poderiam ser vistos dentro do próprio SAMU,  como saber em quais regiões de quais cidades o tempo de resposta era menor ou  maior, e quando o tempo de resposta médio de ambulâncias são maiores do que o  ideal ou desejável quando o chamado de emergência é um AVC, o problema é bem tenso. Naquela época, quando nem possuia conhecimento em programação ou  o Framework Joomla! como é hoje, junto com um dos médicos reguladores que era  um carioca simpático, tinha começado a desenvolver um software para gerenciar  tudo isso. O projeto acabou não seguindo adiante porque em função de eu ter me  afastado do meu cargo e, mesmo com intenção de continuar com esse projeto, não  vingou porque precisaria de mais pessoas ajudando a desenvolver ou então muitas  horas seguidas, situação que minha vida pessoal não permitiu. E eu fiquei  triste com isso.<br />
+</p>
+<p>Existem  outros motivos além desse, porém para não me alongar, vamos dizer que eu  pessoalmente acredito que pessoas que fazem um trabalho que não precisariam  estar fazendo por uma entidade que defende algo louvável, merecem mais o meu  respeito do que outros.</p>
+<h3>Em torno de que tipo de  problema meu posso levar para tentar resolver durante o &ldquo;laboratório&rdquo; do curso?</h3>
+<p>Preferivelmente  algo compatível com o que você acha que com algum esforço saberia fazer em PHP,  em especial alguma extensão nova, mesmo que baseada em algum sistema seu.  Explicitamente, é interessante que não fique essas horas, por exemplo, para  querer resolver um problema de uma extensão especifica qualquer que não siga os  padrões MVC (caso do Virtuemart, por exemplo), ou criando uma extensão de uma  extensão.<br />
+</p>
+<p>Se você é  programador, e tem algum aplicativo que quer portar, a exemplo de uma extensão  que tem telas CRUD, procure já deixar pronto pelo menos o script para criação  das tabelas do seu banco de dados em MySQL. Conforme a complexidade ou se você  tem ou não colaboração de outros para ajudar no seu projeto, talvez seu  aplicativo não ficaria pronto durante o laboratório, porém como vai ver que uma  das vantagens do Joomla! é que pedaços dos seus códigos podem ser reutilizáveis,  é eficiente ajudar a resolver a parte difícil do seu problema, e deixar o  trivial para resolver sozinho, e ao mesmo tempo permitir que você possa  cooperar com outros que estiverem na sala.</p>
+<h3 id="cursos-de-como-fazer-template-joomla-que-recomento">Cursos de como fazer templates  em Joomla! que recomendo</h3>
+<p>No Rio  Grande do Sul não tenho conhecimento de cursos envolvendo melhor esta área. No  Brasil, recomendo os que o André Andrade e equipe (<a href="http://www.estudiosite.com.br" target="_blank">Estudio Site</a>) no Rio de Janeiro, o  <a href="http://danielcorrea.me/" target="_blank">Daniel Corrêa</a> em Minas Gerais e o <a href="http://ronildo.com.br/blog/" target="_blank">Ronildo</a> em São Paulo ministrem, também pela  forte atuação na comunidade Joomla! nos últimos anos.</p>
+<h3 id="conhecimento-em-programacao-requerido">O quanto eu devo saber de  programação para fazer este curso?</h3>
+<p>Observe que  não é extremamente necessário ser um programador PHP experiente. Caso você se  considera que &ldquo;sabe usar o google em tempo real&rdquo;,  provavelmente ficará mais seguro ao saber que  terá acesso a códigos fontes parecidos aos que provavelmente teria que fazer,  além de manuais de referencia do PHP e do framework Joomla. Ou seja, um  ambiente real de um desenvolvedor de extensões. <br />
+</p>
+<p>No caso  daqueles que não tem muita prática em programação em PHP, provavelmente o que  acontecerá depois do curso é que sim, vão conseguir fazer suas extensões, porém  vão demorar um pouco mais, e precisar visitar alguns fóruns e sites de  referência, em especial, o Google. <br />
+</p>
+<p>É possível  sugerir algum tema ou solução de problema a ser abordado no curso?<br />
+  Sim. Junto  com os dados de inscrição, você pode explicar também alguma dúvida ou tipo de  problema que gostaria de ver abordado no curso. Conforme o caso, ele pode ser  citado ou até mesmo usado como exemplo durante o curso. </p>
+<h3>Qual será o material  entregue aos participantes do curso?</h3>
+<p>Os alunos  receberão código fontes usados durante o curso, tanto os que são base para  criação de componentes, módulos, plugins e templates em branco como os que  contém funcionalidades práticas. Além disso, os pedaços de código de exemplo  ministrados durante o curso também serão fornecidos, de modo que estejam  prontos para consulta e uso prático no seu cotidiano.<br />
+</p>
+<p>Os arquivos  de apresentação, ou os guias de referência dos assuntos, a exemplo das  recomendações de segurança, também serão entregues.</p>
+<h3>Quando será o próximo  curso deste tipo?</h3>
+<p>O curso  voltado a Administração do CMS Joomla! provavelmente terá alguma regularidade  -- talvez semestral -- porém não tenho certeza se irei ministrar este curso de  Desenvolvimento de Extensões Joomla! nos moldes deste novamente neste ano.<br />
+</p>
+<p>Não  obstante, isto não quer dizer que eu não vá continuar liberando de graça  informações de como programar em Joomla! neste site ou prestando suporte em  fórums como venho fazendo a anos. Dentre meus planos, reescrever e melhorar  completamente o JoomlaFox para os Devs Joomla!, porém será renomeado para ser  compatível com as regras que estão no do JED.</p>
+<h3>Como faço para me  inscrever no curso? (somente público pagante)</h3>
+<p>Para o  publico pagante, este curso com duração de 5 dias e 40 horas ou mais, custará  R$1200,00 por pessoa, e a seleção será feita exclusivamente pela ordem de  confirmação de pagamento.<br />
+  Para  pagamento parcelado em até 12 ou mais vezes em cartão de crédito, ou desconto  significativo aos que quiserem reservar com antecedência, entre em contato via  e-mail e acerte como fica melhor para você.</p>
+<h3>Como faço para me  inscrever no curso? (público pagante e não pagante)</h3>
+<p>No caso de  se encaixar no perfil de publico não pagante, envie intenção de participar totalmente  de graça do curso com as seguintes informações:</p>
+<ul>
+  <li>Nome completo;</li>
+  <li>Dados para contato, como email e telefone;</li>
+  <li>Sua experiência técnica prévia relacionada com Joomla! e,  programação de alguma linguagem, ou uso de algum CMS próprio da sua instituição ou de terceiros;</li>
+  <li>A qual entidade é vinculado, setor nesta e seu cargo;</li>
+  <li>Dados de contatos da sua entidade ou do seu setor específico, como telefone e e-mail.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Observe que  a quantidade de vagas disponíveis será baseada na procura. Embora não seja o  fator principal que definirá quem vai ser aceito como público principal a data  de envio de interesse, a solicitação de interesse do e-mail poderá ser  considerada. No caso de indicar mais de um participante, informe todos os dados  de ambos.<br />
+  No caso de  se encaixar no público alvo secundário (pagante):</p>
+<ul>
+  <li>Nome completo;</li>
+  <li>Dados de contatos seus, como email e telefone;</li>
+  <li>Sua experiência técnica prévia relacionada com Joomla! e,  programação de alguma linguagem, ou uso de algum CMS próprio da sua instituição ou de terceiros;</li>
+</ul>
+<p>&nbsp;</p>
+<p>Neste caso,  a confirmação de participação será data após conforme demonstração de interesse  antecipado e confirmação de pagamento. No caso de indicar mais de um  participante, informe todos os dados de ambos.<br />
+  O e-mail de  contato, considerando também para inscrições, é emerson@webdesign.eng.br.</p>
+<h5>URL Reduzida: <a href="http://goo.gl/aUh23" title="Curso de Framework e programação de extensões Joomla" target="_blank">http://goo.gl/aUh23</a></h5>
+	
+	<ul class="pager pagenav">
+	<li class="next">
+		<a href="treinamento-permanente-online-por-assinatura.html" rel="next">Próx &gt;</a>
+	</li>
+</ul>
+						 </article>
+
+                    </main>
+                    
+                </div>
+                            </div>
+            <nav class="navegacao-complementar">
+              <h2 class="screen-reader-only">Navegação Complementar</h2>
+              <div class="row-fluid">
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Profissional</h2>
+		
+			<ul class="nav menu">
+<li class="item-277"><a href="curso.html" >Cursos e Treinamentos</a></li><li class="item-127"><a href="/profissional/suporte-joomla.html" >Consutoria em Joomla</a></li><li class="item-347"><a href="/profissional/pericia-forense-digital-websites-invadidos-hackeados.html" >Perícia Forense Digital</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable_menu">
+
+					<h2 class="page-header">Veja Também</h2>
+		
+			<ul class="nav menu">
+<li class="item-279"><a href="palestra.html" >Palestras</a></li><li class="item-266"><a href="podcast.html" >Podcasts</a></li><li class="item-273"><a href="https://github.com/fititnt" >Github</a></li><li class="item-100 parent"><a href="bash.html" >Bash</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Joomla, JPlatform e Afins</h2>
+		
+			<ul class="nav menu">
+<li class="item-165"><a href="joomleiro.html" >O que é &quot;Joomleiro&quot;?</a></li><li class="item-162"><a href="iniciante-joomla.html" >Dicas para Iniciantes</a></li><li class="item-163"><a href="designer-joomla.html" >Dicas para Designers</a></li><li class="item-164"><a href="programador-joomla.html" >Dicas para Programadores</a></li><li class="item-296"><a href="http://forum.joomla.org/viewforum.php?f=23" >Suporte Gratuito</a></li><li class="item-297"><a href="/profissional/suporte-joomla.html" >Suporte Pago</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Recomendo</h2>
+		
+			<ul class="nav menu">
+<li class="item-46"><a href="http://danielcorrea.me/" >Daniel Correa</a></li><li class="item-304"><a href="http://www.vivendoporai.com.br/" >Juliana Fernandes</a></li><li class="item-44"><a href="http://ronildo.com.br/blog/index.php" >Ronildo</a></li></ul>
+
+		</div>
+
+	
+                </div>
+              </div>
+            </nav>
+            <footer class="footer" role="contentinfo">
+              Emerson Rocha Luiz &copy; 2014<br />
+              Site de Web Developer focado em boas práticas. Programação, cursos, treinamentos in company, consutoria e suporte avançado.<br />
+              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=curso-de-framework-e-programacao-de-extensoes-joomla-16" target="_blank" title="HTML5 Valid" rel="nofollow">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( -->
+            </footer>
+        </div>
+    </div>
+        <div>
+            <div class="container">
+                <hr />
+                
+                <p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
+                <a href="http://www.w3.org/html/logo" target="_blank"><img src="data:image/png;base64,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" alt="HTML5 Valid" width="261" height="64"></a></p>
+            </div>
+        </div>
+        
+        <noscript>Javascript desativado. E daí? Faz tanta diferença para você neste site?</noscript>
+        <script src="/templates/fititntv3/js/fititnt6.js"></script>
+    </body>
+</html>

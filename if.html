@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="index.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="if, joomla, condicional, if, usuário, visitante, frontend, backend, debug, template" />
+  <meta name="author" content="Emerson Rocha Luiz" />
+  <meta name="description" content="Lista de Condicionais muito úteis em desenvolvimento Joomla" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>IF - Condicionais muito uteis no desenvolvimento Joomla</title>
+  <link href="if.html" rel="canonical" />
+  <link href="/templates/fititntv3/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/fititntv3/css/template4.css" type="text/css" />
+  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				
+			});function do_nothing() { return; }jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+  </script>
+  <link type="text/css" rel="stylesheet" href="plugins/content/CodeCitation/codecitation/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="plugins/content/CodeCitation/codecitation/styles/shThemeDefault.css"/>
+<script type="text/javascript" src="plugins/content/CodeCitation/codecitation/scripts/shCore.js"></script>
+  <script type="text/javascript" src="plugins/content/CodeCitation/codecitation/scripts/shBrushPhp.js"></script>
+  <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  <link href='https://plus.google.com/103165086227320151428' rel='author'/>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-478966-13']);
+    _gaq.push(['_setDomainName', 'www.fititnt.org']);
+    _gaq.push(['_addIgnoredRef', 'www.fititnt.org']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://pw.alligo.com.br/";
+      _paq.push(["setTrackerUrl", u+"piwik.php"]);
+      _paq.push(["setSiteId", "1"]);
+      var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+      g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+</head>
+<body class="site com_content view-article no-layout no-task itemid-122" itemscope itemtype="http://schema.org/WebPage">
+	<div id="skip">
+		<a href="#content">Pular para conteúdo</a>
+	</div>
+    <div class="body">
+        <div class="container">
+            <header class="header">
+                <div class="header-inner clearfix">
+                    <h1 class="brand pull-left">
+                      <a href="index.html">
+                        <img alt="Programador &amp; consultor focado em Web Standards .::. Joomla!, PHP, Javascript, UI/UX" title="Voltar à página inicial" width="150" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABACAMAAADPuH7iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8r+/2UBA/O/vzxAQ0iAg7J+f9c/P1jAw32Bg6Y+P76+v4nBw+d/f3FBQ5oCAzAAA////nO5BRgAAABF0Uk5T/////////////////////wAlrZliAAABkklEQVR42uzZ63aDIAwAYIKAeCnw/k87J7XDoDJYLZyz5FerNHxWBTHMNRmMWMT63yzFGFNtsfgAdg3/1axx+eO1BbuXNXbWhqzw83GYtYW5lSWtbZDFuyZZg02xYkS0JX0kvzzAF+t5tT/G5VZsiOXP4cOd91GF5TOGQxYeIGJWNEDcxfrjBU4sYhErCKn7ZW8HB5P7EcviiPowuAWLkuEW4NP/tDDB7CYkFqHcn2IpgXbzFliqw/sFr8+KVdb21VmTVwm9TFX6dTZlgnVyE71jqmbBv7N1xZ4wUTZAvJc1BWuG3m8a67N2wx2LpJVYsB89e7yxEmveswZ8cdVhPfAKIpX7MyyJWLwN1pya0+uwXJMsIBaxiEUsYhGLWMRqkaXTrLmUpUtYQ/QAHLH86rnn2SycO4O1rWIEAKhjFmzrL4Api4VzZ7Bcd/UOApdCIIuFc+ewTJIVFI4yWaactb07OGcFZbZMFsqdw3Jcp1huFGUslDuzdMq/6ymM8YsmShojSwrLYW6q7BOLWC3ElwADANs3QeEEqCaUAAAAAElFTkSuQmCC"/>
+                      </a>
+                    </h1>
+                    <div class="header-search pull-right" role="search">
+<form id="mod-finder-searchform" action="/pesquisar.html" method="get" class="form-search">
+	<div class="finder">
+		<label for="mod-finder-searchword" class="finder hidden">Pesquisar no site</label><br /><input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="20" value="" placeholder="Faça uma pesquisa completa no site agora"/><button class="btn btn-primary hasTooltip  finder" type="submit" title="Ir">Ir</button>
+					</div>
+</form>
+
+</div>
+
+                </div>
+            </header>
+                            <div id="menu-principal" class="navigation" role="navigation">
+                    		<nav class="moduletable">
+
+					<h2 class="hidden">Navegação principal</h2>
+		
+			<ul class="nav menu nav-pills">
+<li class="item-159"><a href="index.html" >Início</a></li><li class="item-160"><a href="sobre.html" >Sobre o Autor</a></li><li class="item-298"><a href="/profissional/suporte-joomla.html" >Consultoria</a></li><li class="item-309"><a href="curso.html" >Cursos &amp; Treinamentos</a></li><li class="item-167"><a href="contato.html" >Contato</a></li></ul>
+
+		</nav>
+
+	
+                </div>
+                        
+            <div class="row-fluid">
+                                    <div id="sidebar" class="span3">
+                        <div class="sidebar-nav" role="navigation">
+                            		<div class="moduletable">
+
+					<h2 class="page-header">Alguns tópicos gerais</h2>
+		
+			<ul class="nav menu">
+<li class="item-278"><a href="comunidade.html" >Comunidade Software Livre</a></li><li class="item-311"><a href="frontend.html" >Frontend (HTML, CSS, JS)</a></li><li class="item-275"><a href="ferramenta.html" >Ferramentas</a></li><li class="item-299"><a href="joomla.html" >Joomla®</a></li><li class="item-283"><a href="padrao.html" >Padrões</a></li><li class="item-114"><a href="off.html" >Off-topic</a></li><li class="item-280"><a href="ui-ux.html" >UI/UX</a></li></ul>
+
+		</div>
+
+			<aside class="moduletable clearfix">
+
+					<h2 class="page-header">Sobre o autor</h2>
+		
+			
+
+<div class="custom clearfix"  >
+	<img src="//cdn.fititnt.org/img/emerson-rocha-luiz.jpg" width="130" height="160" alt="Emerson Rocha Luiz" style="margin:.3em" class="pull-left img-polaroid"/>
+<p><a href="http://www.linkedin.com/pub/emerson-rocha-luiz/2a/3aa/6a6" target="_blank" title="LinkedIn de Emerson Rocha Luiz">Emerson Rocha Luiz</a>, 28 anos, residente de Porto Alegre, é um Web Developer com 9 anos de experiência.</p>
+<p>Além de <a href='https://www.google.com.br/search?q=%22Emerson+Rocha+Luiz%22+AND+%22software+livre%22' target="_blank" title="Pesquisa no Google por Emerson Rocha Luiz mais Software Livre">ativo na comunidade de software livre</a>, costuma ser flexível ao prover <a href="http://www.fititnt.org/profissional/suporte-joomla.html" title="Serviço de consultoria direta e serm intermediários">consultoria</a> para outros desenvolvedores em áreas que domina. <a href="https://www.linkedin.com/in/fititnt" target="_blank">LinkedIn&#8599;</a></p>
+<p>É sócio-fundador na <a href="http://www.alligo.com.br" target="_blank" title="Site da Alligo: projetos web que envolvam front-end, back-end (Joomla), UX, acessibilidade, microdata, semântica...">Alligo</a>, que atende projetos robustos desde o planejamento até o suporte.</p></div>
+
+		</aside>
+
+			<div class="moduletable">
+
+					<h3 class="page-header">Recomendo sobre "Joomla!"</h3>
+		
+			
+
+<div class="custom"  >
+	
+<p><a href="http://www.fititnt.org/joomla/temas-e-extensoes-nao-sao-so-comprar-e-sair-usando.html" target="_blank">Temas e extensões não são 'só comprar e sair usando' </a></p>
+<p><a href="http://www.fititnt.org/extensoes/otimizacao-para-sistemas-de-busca-joomla.html" target="_blank">Joomla puro, URLs perfeitas: melhore sua SEO</a></p>
+<p><a href="http://www.fititnt.org/joomla/usar-ou-nao-um-framework-de-template-joomla.html" target="_blank">Usar ou não um framework de template Joomla ao desenvolver o seu tema?</a></p>
+<p><a href="http://www.fititnt.org/iniciante-joomla.html" target="_blank">Comecou a usar Joomla!. E agora?</a></p>
+<p><a href="http://www.fititnt.org/recuperar-senha-joomla.html" target="_blank">Como recuperar senha Joomla! </a></p>
+<p><a href="http://www.fititnt.org/joomla/padroes-de-programacao.html" target="_blank">Padrões de programação Joomla!</a></p> </div>
+
+		</div>
+
+	
+                        </div>
+                    </div>
+                                <div id="content" class="span9" tabindex="-1">
+                    		<div class="moduletable">
+
+					<h2 class="hidden">Breadcrumbs</h2>
+		
+			
+<ul class="breadcrumb " itemprop="breadcrumb">
+<li class="active"><span class="divider">Você está aqui: </span></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.html" class="pathway" itemprop="url"><span itemprop="title">Inicio</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="divider">/</span><span itemprop="title">IF - Condicionais muito uteis no desenvolvimento Joomla</span></li></ul>
+
+		</div>
+
+	
+                    <div id="system-message-container">
+	</div>
+
+                    <main role="main">
+                    <article class="item-page" itemscope itemtype="http://schema.org/Article">
+					
+		<header class="page-header">
+		<h2 itemprop="name">
+															<a href="if.html"> IFs - Condicionais muito úteis em desenvolvimento Joomla</a>
+									</h2>
+			
+																Escrito por <span itemprop="author"><a href="contato.html" rel="me">Emerson Rocha Luiz</a></span>									</header>
+	
+			<footer class="article-info muted">
+			<dl class="article-info">
+			<dt class="article-info-term">Detalhes</dt>
+
+										<dd>
+					<div class="category-name">
+																			Categoria: <a href="/codigo/joomla.html">Joomla</a>											</div>
+				</dd>
+			
+			
+												<dd>
+						<div class="modified">
+							<i class="icon-calendar" itemprop="dateModified"></i> Última atualização: 23 Junho 2012						</div>
+					</dd>
+													<dd>
+						<div class="create">
+							<i class="icon-calendar" itemprop="dateCreated"></i> Criado: 27 Novembro 2009						</div>
+					</dd>
+				
+										</dl>
+		</footer>
+	
+		
+								<div class="socializeme-r-v"><div class="sm-ttb"><a href="http://twitter.com/share" class="twitter-share-button" data-url="if" data-count="vertical" data-lang="pt-BR" data-via="fititnt">Twitter</a></div></div><p>Esta lista ainda não é definitiva. Resolvi publicar ela mesmo não tendo muito conteúdo por já estar adiando a tempos isso. Caso você tenha sugestões, ou tenha dúvida de algum IF que possa ser util para você, pode <a href="http://www.fititnt.org/contato.html" target="_blank">entrar em contato</a> ou deixar um comentário no final desta página.
+ <h3>Prefácio - O que saber antes de começar</h3>
+ <p>Em primeiro lugar, você deve ter em mente que um if de PHP pode ser organizado de diversas formas, inclusive usando as condicionais se verdadeiras ou falsas em outros casos. Tome esta página como conhecimento para algumas dúvidas comuns no dia-a-dia de um programador de extensões ou em um desenvolvedor de templates. E lembre-se que você pode fazer sugestões.</p>
+ 
+ <h4>"If tipo 1" - Grandes Blocos de HTML (templates e afins)</h4>
+ <p>Se você é designer, certamente vai usar muito esse tipo.</p>
+ <script type="text/javascript">
+	SyntaxHighlighter.config.clipboardSwf = "plugins/content/CodeCitation/codecitation/scripts/clipboard.swf";
+	SyntaxHighlighter.defaults["auto-links"] = true;
+	SyntaxHighlighter.defaults["collapse"] = false;
+	SyntaxHighlighter.defaults["gutter"] = true;
+	SyntaxHighlighter.defaults["smart-tabs"] = true;
+	SyntaxHighlighter.defaults["tab-size"] = 4;
+	SyntaxHighlighter.defaults["toolbar"] = true;
+	SyntaxHighlighter.defaults["wrap-lines"] = true;	
+	SyntaxHighlighter.all();
+</script><div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php if (CONDICAO) : ?&gt; &lt;!--Olá! :D Eu sou um HTML feliz --&gt; &lt;!--Caso a CONDICAO seja verdadeira, eu aparecerei na página! --&gt; &lt;jdoc:include type="modules" name="top" style="beezDivision" headerLevel="3" /&gt; &lt;?php endif; ?&gt;</pre></div>
+ 
+ <h4>"If tipo 2.1" - Melhor quando trabalha com PHP e pouco HTML</h4>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php if (CONDICAO) {   echo JText::_('Oi! A condição é verdadeira!\');   }?&gt;</pre></div>
+ <h4>"If tipo 2.2" - Melhor quando trabalha com PHP e pouco HTML</h4>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php if (CONDICAO1) {   echo JText::_('Oi! A CONDICAO1 é verdadeira!');   } elseif (CONDICAO2) {necho JText::_('Oi! A CONDICAO1 é falsa! Mas a CONDICAO2 verdadeira!');   } else {   necho JText::_('Oi! A CONDICAO1 e CONDICAO2 São Falsas!');   }?&gt;</pre></div>
+ <h4>Dica: de como especificar apenas excessões!</h4>
+   <p>Neste caso é simples. em todas as condicionais que você quiser dizer o contrário, basta adicionar exclamação (!) antes da condição:</p>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> if (!CONDICAO) {     echo JText::_('Minha condição NÂO é verdadeira!');   }</pre></div>
+ 
+ 
+ <h3>Determinar se é frontend ou backend</h3>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $app = JFactory::getApplication(); if ($app-&gt;isAdmin()) {     echo JText::_('Estou na área administrativa do Joomla!'); } else {     echo JText::_('Não estou na área administrativa do Joomla!'); }</pre></div>
+ 
+ <h4>Exemplo: Retornar URL base independente de ser frontend ou backend</h4>
+   <p> Se você não sabe, o modo de como retornar a URL base do Joomla é diferente no frontend do backend. O código mais curto para evitar ter que pensar muito ou mesmo usar um mesmo arquivo nas duas áreas é o seguinte.
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $app = JFactory::getApplication(); $live_site = $app-&gt;isAdmin() ? $app-&gt;getSiteURL() : JURI::base();</pre></div>
+ Obrigado ao Chris Davenport pela idéia simples e prática.
+
+ <h3><a name="determinar-se-e-pagina-inicial"></a>Determinar se é a página inicial (frontpage do site)</h3>
+<p>Baseado na documentação oficial <a href="http://docs.joomla.org/How_to_determine_if_the_user_is_viewing_the_front_page" target="_blank">How to determine if the user is viewing the front page</a>.
+<div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php// Para conteúdos que possuem a mesma linguagem$app = JFactory::getApplication();$menu = $app-&gt;getMenu();if ($menu-&gt;getActive() == $menu-&gt;getDefault()) {    echo JText::_('Voce esta vendo a pagina inicial do site')}?&gt;</pre></div>
+<div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php// Para conteúdos de idiomas diferentes$app = JFactory::getApplication();$menu = $app-&gt;getMenu();if ($menu-&gt;getActive() == $menu-&gt;getDefault( 'en-GB' )) {    echo 'This is the front page';}elseif ($menu-&gt;getActive() == $menu-&gt;getDefault( 'pt-BR' )) {    echo 'Página inicial';}?&gt;</pre></div>
+
+<div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php// Este código abaixo funcionava até a versão 1.5, e era a recomendação. // Se tiver que atualizar extensões, converta seu código antigo para os acima$menu = JSite::getMenu();if ($menu-&gt;getActive() == $menu-&gt;getDefault()) {        echo JText::_('Voce esta vendo a pagina inicial do site');}?&gt;</pre></div>
+ 
+ <h3><a name="determinar-se-e-pagina-especifica"></a>Determinar se é a página especifica</h3>
+<p>Baseado no post do <a href="http://forum.joomla.org/viewtopic.php?p=1864251#p1864251" target="_blank">nailson_imgn</a>.
+<div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php$paginaatual = JURI::current();if( $paginaAtual == 'link/da/pagina/de/noticias.html' ){   echo JText::_('Voce esta vendo a página link/da/pagina/de/noticias.html desde site');}?&gt;</pre></div>
+
+ <h3>Determinar se é um componente específico (option)</h3>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $option = JRequest::GetWord('option'); //com_content, com_user, com_contact... if ($option == 'com_content') {     echo JText::_('Esta página é do componente com_content '); }</pre></div>
+ 
+ <h3>Determinar se é uma view especifica (view)</h3>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $view = JRequest::GetWord('view'); //frontpage, default, form, ... if ($view == 'frontpage') {     echo JText::_('Esta página é exibida com a view frontpage'); }</pre></div>
+ 
+ <h3>Determinar se é um formato específico (format)</h3>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $format = JRequest::GetWord('format'); //html, pdf, raw,...  if ($format == 'html') {      echo JText::_('Esta página é exibida com o format html');  }</pre></div>
+ 
+ <h3>Determinar se é uma página especifica (Itemid)</h3>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $ItemId = JRequest::GetInt('Itemid'); //Numero do artigo  if ($ItemId == '27') {      echo JText::_('Esta página é especifica do menu de ID 27'); }</pre></div>
+ <p>Obrigado ao Fernando Nunes e até ao João Amado Alves da Rosa. Demorei 5 (!) meses, mas atualizei aqui. A antes estava menu do artigo, e não do menu, como é o correto</p>
+ <h3>Determinar se é visitante ou usuário logado</h3>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $user = JFactory::getUser(); if ( $user-&gt;get('guest') ) { //$user-&gt;get('guest') retorna '1' caso seja visitante      echo JText::_('Você é um visitante!'); } else {      echo JText::_('Você é um usuario autenticado!'); }</pre></div>
+ <h4>Exemplo: Exibir posição de módulo <strong>apenas</strong> para visitantes </h4>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;">&lt;?php$user = JFactory::getUser();if ($user-&gt;get('guest')) : ?&gt;&lt;!--HTML aqui dentro --&gt;&lt;jdoc:include type="modules" name="top" style="beezDivision" headerLevel="3" /&gt;&lt;?php endif; ?&gt;</pre></div>
+ 
+ <h3>Determinar se é um tipo de usuário</h3>
+ <p> Dois parametros podem ser usados do JUser neste caso: <strong>grid</strong> e <strong>usertype</strong>. Grid é o equivalente numérico do usertype ao qual você já deve estar acostumado, e o usertipe é o nome com o qual o grupo do usuário é salvo no banco de dados<p>
+   <p>Visite <a href="http://docs.joomla.org/Accessing_the_current_user_object" target="_blank">Accessing the current user object</a>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $user = JFactory::getUser();     if ( $user-&gt;get('usertype') == 'Super Administrator') { //Super Administrator, Administrator, Manager...      echo JText::_('Você é um Super Administrador do sistema!'); }</pre></div>
+ 
+ <h3>Determinar se é um usuário específico</h3>
+     <p> Neste exemplo, ao usar somente o &#39;$user = JFactory::getUser()&#39; estamos carregando o usuário atualmente logado no sistema. Se por exemplo quer pegar os dados de qualquer usuário específico, independente de quem esteja logado no sistema, deve especificar o id do respectivo usuáio ou o username, no caso $user = JFactory::getUser(62) / $user = JFactory::getUser(&#39;admin&#39;) para o administrador padrão do Joomla.</p>
+ <p>Neste exemplo, vamos pegar somente o usuário atualmente logado e procurar saber se o id dele é igua o id de usuário que queremos. Mas lembre-se que você pode usar qualquer outro dos parâmetros, como username ou nome de usuário</p>
+   <p>Visite <a href="http://docs.joomla.org/Accessing_the_current_user_object" target="_blank">Accessing the current user object</a>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> $user = JFactory::getUser();     if ( $user-&gt;get('id') == '62') { //Super Administrator, Administrator, Manager...      echo JText::_('Você é especificamente o usuário que estou procurando!'); }</pre></div>
+     
+     
+     <h3><a name="jdebug">Determinar se o modo de debug está ligado</a></h3>
+     <p>Quando estiver desenvolvendo uma extensão, é comum usar certos códigos para ver como as coisas estão indo. Não obstante, ao entregar para o cliente final ficar apagando, ou com sorte só comentando, pode encomodar um pouco, em especial se o projeto em questão não foi &#39;finalizado para todo o sempre&#39; ou mesmo ainda está em constante desenvolvimento. Neste caso você tem pelo menos duas boas alternativas são voce usar para debugar sua extensão: extender o modo debug padrão do joomla, ou setar sua própria variavel no arquivo principal de sua extensão, fazendo com que o resto do código execute se tal código estiver definido. Neste exemplo, você tem como base como executar um ploco de ações somente quando o Modo debug padrão do Joomla estiver ligado</p>
+ <div style="overflow: hidden; display: block; height: auto; width: inherit;"><pre class="brush:php;"> if (JDEBUG) { //JDEBUG é uma constante definida pelo sistema com Debug = ON      echo JText::_('O debug do sistema está on! Posso dar uns print_r() a vontade :D'); }</pre></div>
+     <p /> Outra dica para quem quer debugar em Joomla é usar o <a href="http://www.fititnt.org/joomlafox-pt.html" target="_blank">JoomlaFox!</a> 
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a href="getgithubcode.html" rel="prev">&lt; Ant</a>
+	</li>
+	<li class="next">
+		<a href="/codigo/joomla/funcao-criar-novo-usuario-joomla-15.html" rel="next">Próx &gt;</a>
+	</li>
+</ul>
+						 </article>
+
+                    </main>
+                    
+                </div>
+                            </div>
+            <nav class="navegacao-complementar">
+              <h2 class="screen-reader-only">Navegação Complementar</h2>
+              <div class="row-fluid">
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Profissional</h2>
+		
+			<ul class="nav menu">
+<li class="item-277"><a href="curso.html" >Cursos e Treinamentos</a></li><li class="item-127"><a href="/profissional/suporte-joomla.html" >Consutoria em Joomla</a></li><li class="item-347"><a href="/profissional/pericia-forense-digital-websites-invadidos-hackeados.html" >Perícia Forense Digital</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable_menu">
+
+					<h2 class="page-header">Veja Também</h2>
+		
+			<ul class="nav menu">
+<li class="item-279"><a href="palestra.html" >Palestras</a></li><li class="item-266"><a href="podcast.html" >Podcasts</a></li><li class="item-273"><a href="https://github.com/fititnt" >Github</a></li><li class="item-100 parent"><a href="bash.html" >Bash</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Joomla, JPlatform e Afins</h2>
+		
+			<ul class="nav menu">
+<li class="item-165"><a href="joomleiro.html" >O que é &quot;Joomleiro&quot;?</a></li><li class="item-162"><a href="iniciante-joomla.html" >Dicas para Iniciantes</a></li><li class="item-163"><a href="designer-joomla.html" >Dicas para Designers</a></li><li class="item-164"><a href="programador-joomla.html" >Dicas para Programadores</a></li><li class="item-296"><a href="http://forum.joomla.org/viewforum.php?f=23" >Suporte Gratuito</a></li><li class="item-297"><a href="/profissional/suporte-joomla.html" >Suporte Pago</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Recomendo</h2>
+		
+			<ul class="nav menu">
+<li class="item-46"><a href="http://danielcorrea.me/" >Daniel Correa</a></li><li class="item-304"><a href="http://www.vivendoporai.com.br/" >Juliana Fernandes</a></li><li class="item-44"><a href="http://ronildo.com.br/blog/index.php" >Ronildo</a></li></ul>
+
+		</div>
+
+	
+                </div>
+              </div>
+            </nav>
+            <footer class="footer" role="contentinfo">
+              Emerson Rocha Luiz &copy; 2014<br />
+              Site de Web Developer focado em boas práticas. Programação, cursos, treinamentos in company, consutoria e suporte avançado.<br />
+              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=if" target="_blank" title="HTML5 Valid" rel="nofollow">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( -->
+            </footer>
+        </div>
+    </div>
+        <div>
+            <div class="container">
+                <hr />
+                
+                <p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
+                <a href="http://www.w3.org/html/logo" target="_blank"><img src="data:image/png;base64,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" alt="HTML5 Valid" width="261" height="64"></a></p>
+            </div>
+        </div>
+        
+        <noscript>Javascript desativado. E daí? Faz tanta diferença para você neste site?</noscript>
+        <script src="/templates/fititntv3/js/fititnt6.js"></script>
+    </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="index.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="consultoria, produtividade, deficit de atenção, git, netbeans, netbeans, Doxygen" />
+  <meta name="author" content="Emerson Rocha Luiz" />
+  <meta name="description" content="Como melhorar a produtividade ao fazer código ao usar certas ferramentas e técnicas" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Melhore sua produtividade ao fazer código</title>
+  <link href="melhore-sua-produtividade-ao-fazer-codigo.html" rel="canonical" />
+  <link href="/templates/fititntv3/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/fititntv3/css/template4.css" type="text/css" />
+  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				
+			});function do_nothing() { return; }jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+  </script>
+  <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  <link href='https://plus.google.com/103165086227320151428' rel='author'/>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-478966-13']);
+    _gaq.push(['_setDomainName', 'www.fititnt.org']);
+    _gaq.push(['_addIgnoredRef', 'www.fititnt.org']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://pw.alligo.com.br/";
+      _paq.push(["setTrackerUrl", u+"piwik.php"]);
+      _paq.push(["setSiteId", "1"]);
+      var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+      g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+</head>
+<body class="site com_content view-article no-layout no-task itemid-251" itemscope itemtype="http://schema.org/WebPage">
+	<div id="skip">
+		<a href="#content">Pular para conteúdo</a>
+	</div>
+    <div class="body">
+        <div class="container">
+            <header class="header">
+                <div class="header-inner clearfix">
+                    <h1 class="brand pull-left">
+                      <a href="index.html">
+                        <img alt="Programador &amp; consultor focado em Web Standards .::. Joomla!, PHP, Javascript, UI/UX" title="Voltar à página inicial" width="150" height="64" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABACAMAAADPuH7iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8r+/2UBA/O/vzxAQ0iAg7J+f9c/P1jAw32Bg6Y+P76+v4nBw+d/f3FBQ5oCAzAAA////nO5BRgAAABF0Uk5T/////////////////////wAlrZliAAABkklEQVR42uzZ63aDIAwAYIKAeCnw/k87J7XDoDJYLZyz5FerNHxWBTHMNRmMWMT63yzFGFNtsfgAdg3/1axx+eO1BbuXNXbWhqzw83GYtYW5lSWtbZDFuyZZg02xYkS0JX0kvzzAF+t5tT/G5VZsiOXP4cOd91GF5TOGQxYeIGJWNEDcxfrjBU4sYhErCKn7ZW8HB5P7EcviiPowuAWLkuEW4NP/tDDB7CYkFqHcn2IpgXbzFliqw/sFr8+KVdb21VmTVwm9TFX6dTZlgnVyE71jqmbBv7N1xZ4wUTZAvJc1BWuG3m8a67N2wx2LpJVYsB89e7yxEmveswZ8cdVhPfAKIpX7MyyJWLwN1pya0+uwXJMsIBaxiEUsYhGLWMRqkaXTrLmUpUtYQ/QAHLH86rnn2SycO4O1rWIEAKhjFmzrL4Api4VzZ7Bcd/UOApdCIIuFc+ewTJIVFI4yWaactb07OGcFZbZMFsqdw3Jcp1huFGUslDuzdMq/6ymM8YsmShojSwrLYW6q7BOLWC3ElwADANs3QeEEqCaUAAAAAElFTkSuQmCC"/>
+                      </a>
+                    </h1>
+                    <div class="header-search pull-right" role="search">
+<form id="mod-finder-searchform" action="/pesquisar.html" method="get" class="form-search">
+	<div class="finder">
+		<label for="mod-finder-searchword" class="finder hidden">Pesquisar no site</label><br /><input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="20" value="" placeholder="Faça uma pesquisa completa no site agora"/><button class="btn btn-primary hasTooltip  finder" type="submit" title="Ir">Ir</button>
+					</div>
+</form>
+
+</div>
+
+                </div>
+            </header>
+                            <div id="menu-principal" class="navigation" role="navigation">
+                    		<nav class="moduletable">
+
+					<h2 class="hidden">Navegação principal</h2>
+		
+			<ul class="nav menu nav-pills">
+<li class="item-159"><a href="index.html" >Início</a></li><li class="item-160"><a href="sobre.html" >Sobre o Autor</a></li><li class="item-298"><a href="/profissional/suporte-joomla.html" >Consultoria</a></li><li class="item-309"><a href="curso.html" >Cursos &amp; Treinamentos</a></li><li class="item-167"><a href="contato.html" >Contato</a></li></ul>
+
+		</nav>
+
+	
+                </div>
+                        
+            <div class="row-fluid">
+                                    <div id="sidebar" class="span3">
+                        <div class="sidebar-nav" role="navigation">
+                            		<div class="moduletable">
+
+					<h2 class="page-header">Alguns tópicos gerais</h2>
+		
+			<ul class="nav menu">
+<li class="item-278"><a href="comunidade.html" >Comunidade Software Livre</a></li><li class="item-311"><a href="frontend.html" >Frontend (HTML, CSS, JS)</a></li><li class="item-275"><a href="ferramenta.html" >Ferramentas</a></li><li class="item-299"><a href="joomla.html" >Joomla®</a></li><li class="item-283"><a href="padrao.html" >Padrões</a></li><li class="item-114"><a href="off.html" >Off-topic</a></li><li class="item-280"><a href="ui-ux.html" >UI/UX</a></li></ul>
+
+		</div>
+
+			<aside class="moduletable clearfix">
+
+					<h2 class="page-header">Sobre o autor</h2>
+		
+			
+
+<div class="custom clearfix"  >
+	<img src="//cdn.fititnt.org/img/emerson-rocha-luiz.jpg" width="130" height="160" alt="Emerson Rocha Luiz" style="margin:.3em" class="pull-left img-polaroid"/>
+<p><a href="http://www.linkedin.com/pub/emerson-rocha-luiz/2a/3aa/6a6" target="_blank" title="LinkedIn de Emerson Rocha Luiz">Emerson Rocha Luiz</a>, 28 anos, residente de Porto Alegre, é um Web Developer com 9 anos de experiência.</p>
+<p>Além de <a href='https://www.google.com.br/search?q=%22Emerson+Rocha+Luiz%22+AND+%22software+livre%22' target="_blank" title="Pesquisa no Google por Emerson Rocha Luiz mais Software Livre">ativo na comunidade de software livre</a>, costuma ser flexível ao prover <a href="http://www.fititnt.org/profissional/suporte-joomla.html" title="Serviço de consultoria direta e serm intermediários">consultoria</a> para outros desenvolvedores em áreas que domina. <a href="https://www.linkedin.com/in/fititnt" target="_blank">LinkedIn&#8599;</a></p>
+<p>É sócio-fundador na <a href="http://www.alligo.com.br" target="_blank" title="Site da Alligo: projetos web que envolvam front-end, back-end (Joomla), UX, acessibilidade, microdata, semântica...">Alligo</a>, que atende projetos robustos desde o planejamento até o suporte.</p></div>
+
+		</aside>
+
+	
+                        </div>
+                    </div>
+                                <div id="content" class="span9" tabindex="-1">
+                    		<div class="moduletable">
+
+					<h2 class="hidden">Breadcrumbs</h2>
+		
+			
+<ul class="breadcrumb " itemprop="breadcrumb">
+<li class="active"><span class="divider">Você está aqui: </span></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="index.html" class="pathway" itemprop="url"><span itemprop="title">Inicio</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="divider">/</span><span itemprop="title">Melhore sua produtividade ao fazer código</span></li></ul>
+
+		</div>
+
+	
+                    <div id="system-message-container">
+	</div>
+
+                    <main role="main">
+                    <article class="item-page" itemscope itemtype="http://schema.org/Article">
+					
+		<header class="page-header">
+		<h2 itemprop="name">
+															<a href="melhore-sua-produtividade-ao-fazer-codigo.html"> Melhore sua produtividade ao fazer código</a>
+									</h2>
+			
+																Escrito por <span itemprop="author"><a href="contato.html" rel="me">Emerson Rocha Luiz</a></span>									</header>
+	
+			<footer class="article-info muted">
+			<dl class="article-info">
+			<dt class="article-info-term">Detalhes</dt>
+
+										<dd>
+					<div class="category-name">
+																			Categoria: <a href="/artigo/11-programacao.html">Programação</a>											</div>
+				</dd>
+			
+			
+												<dd>
+						<div class="modified">
+							<i class="icon-calendar" itemprop="dateModified"></i> Última atualização: 12 Fevereiro 2013						</div>
+					</dd>
+													<dd>
+						<div class="create">
+							<i class="icon-calendar" itemprop="dateCreated"></i> Criado: 14 Março 2012						</div>
+					</dd>
+				
+										</dl>
+		</footer>
+	
+		
+								<div class="socializeme-r-v"><div class="sm-ttb"><a href="http://twitter.com/share" class="twitter-share-button" data-url="melhore-sua-produtividade-ao-fazer-codigo" data-count="vertical" data-lang="pt-BR" data-via="fititnt">Twitter</a></div></div><p>
+  Este &eacute; um artigo rapido, por&eacute;m cont&eacute;m algumas sugest&otilde;es que podem melhorar significativamente sua produtividade ao fazer c&oacute;digo. Al&eacute;m de consultoria, meu foco &eacute; desenvolvimento backend, e programa&ccedil;&atilde;o em PHP, mas todas as ferramentas aqui que eu uso servem para mais de uma linguagem, e s&atilde;o gratuitas. &Eacute; importante ressaltar que o fato de ser opensource n&atilde;o quer dizer que eu apenas sou um entusiasta de software livre: eu uso essas ferramentas porque, pra mim, elas s&atilde;o boas, e mesmo se eu encontrasse uma ferramenta comercial que fosse melhor e mais flex&iacute;vel do que estas em n&atilde;o me importaria em pagar. A quest&atilde;o &eacute; que para IDEs, ao menos quando n&atilde;o envolve pesadamente quest&otilde;es mais visuais ou que tenham que ser extremamente f&aacute;ceis para o usu&aacute;rio, nenhuma outra IDE me faz mudar de ideia de forma consistemte.</p>
+ 
+<p>
+  Cada item desse artigo merece no futuro um ou mais artigos apenas para descrever em detalhes o que cito aqui. Por&eacute;m desde j&aacute; creio que serve como uma sugest&atilde;o para quem quiser testar as sugest&otilde;es que eu fa&ccedil;o.</p>
+<h3>
+  Use um sistema de controle de vers&atilde;o decente</h3>
+<p>
+  O GIT &eacute;, sem d&uacute;vida, a melhor ferramenta para gerenciamento de controle de vers&otilde;es da atualidade, e duvido que apare&ccedil;a alguma coisa melhor antes de 2020. Exceto se usar MAC, em geral as ferramentas de interface gr&aacute;fica dele n&atilde;o s&atilde;o muito amig&aacute;veis, e isso quer dizer que voc&ecirc; ter&aacute;, sim, que aprender comandos direto em alguma telinha preta. Isso te d&aacute; medo?</p>
+<p>
+  Boa parte do pessoal inicial nem percebe &eacute; que o GIT, por natureza, mantem praticamente a mesma c&oacute;pia de forma descentralizada. Isso quer dizer que voc&ecirc; pode ficar offline e ainda assim ter&aacute; acesso a praticamente tudo que gostaria, como hist&oacute;rico de commits anteriores de outras pessoas, poder dar merges, criar branches e afins, sem nem mesmo estar conectado &agrave; internet, e s&oacute; sincronizar quando voc&ecirc; bem entender.</p>
+<p>
+  Se voc&ecirc; &eacute; novo no mundo do GIT, e quer fazer testes, recomendaria brincar um pouco usando o&nbsp;<a href="https://github.com/">https://github.com</a>&nbsp;at&eacute; ter intimidade.</p>
+<p>
+  Recomento a leitura de&nbsp;<a href="http://help.github.com/win-set-up-git/">http://help.github.com/win-set-up-git/</a>&nbsp;,&nbsp;<a href="http://help.github.com/mac-set-up-git/">http://help.github.com/mac-set-up-git/</a>&nbsp;, &nbsp;<a href="http://help.github.com/linux-set-up-git/">http://help.github.com/linux-set-up-git/</a>, que s&atilde;o as ajudas em ingl&ecirc;s do Github sobre como setar a ferramenta.</p>
+<h4>
+  O que eu uso</h4>
+<ul>
+  <li>
+    GIT bash, Git GUI e gitk.&nbsp;</li>
+</ul>
+<p>
+  Importante: nem perca tempo com outros sistemas que n&atilde;o s&atilde;o baseados em GIT. Exceto se for pago para isso. S&eacute;rio.</p>
+<h3>
+  Use uma IDE &quot;pesada&quot; para fazer servi&ccedil;os &quot;pesados&quot;</h3>
+<p>
+  Eu tamb&eacute;m sou da teoria que programador bom &eacute; aquele cara que sabe fazer acontecer usando at&eacute; um bloco de notas da vida. Mas, c&aacute; entre n&oacute;s, isso faz diferen&ccedil;a para mostrar sua habilidade, por&eacute;m em um ambiente real, uma boa IDE ajuda na produtividade, pois tarefas como busca e/ou substitui&ccedil;&atilde;o de strings para arquivos, cole&ccedil;&otilde;es de snippets/templates criados pelo pr&oacute;prio usu&aacute;rio volta e meia diminuem o estresse de tarefas repetitivas. E nem preciso mencionar algo como auto completar c&oacute;digo. E quanto mais feliz voc&ecirc; for fazendo c&oacute;digo, melhor.</p>
+<p>
+  Algo que para quem programa &eacute; primordial e que toda IDE decente tem suporte e que voc&ecirc; n&atilde;o deveria menosprezar. O primeiro &eacute; enquanto voc&ecirc; usa um m&eacute;todo de terceiros, ou mesmo um seu que voc&ecirc; documentou, deve aparecer algum tipo de ajuda explicando como esse m&eacute;todo &eacute; usado. Outro ponto &eacute; que ao apertar alguma combina&ccedil;&atilde;o de teclas, dentro da sua pr&oacute;pria janela, o editor deve levar voc&ecirc; para o local aonde aquele m&eacute;todo est&aacute; definido. Essas duas rotinas que falei, todas as IDEs decentes tem suporte padr&atilde;o, por&eacute;m normalmente elas requerem que caso voc&ecirc; insira bibliotecas que n&atilde;o s&atilde;o nativas do PHP ou que n&atilde;o est&atilde;o na mesma pasta do seu projeto, que ent&atilde;o v&aacute; em alguma parte da IDE e adicione o local dessa biblioteca como uma biblioteca usada no seu projeto. Se souber configurar essas duas rotinas que falei, voc&ecirc; ser&aacute; mais feliz ao lidar com projetos de grande porte.</p>
+<p>
+  Outro ponto importante que faz diferen&ccedil;a para quem n&atilde;o se habituou com o GIT, e ter um hist&oacute;rico de vers&atilde;o local dos arquivos. Pelo menos no Netbeans, por padr&atilde;o ele mantem um hist&oacute;rico de cada arquivo individualmente a cada vez que &eacute; salvo, e permite de forma simples comparar a vers&atilde;o anterior com a atual, e atrav&eacute;s de alguns cliques decidir o que deve ser revertido da vers&atilde;o anterior para a atual. Mesmo ao usar o GIT, eu eventualmente uso isso pois, quando &eacute; algo mais simples, ou ent&atilde;o quando &eacute; algo que aconteceu em um periodo intermediario entre commits (aka salvar vers&atilde;o) do GIT.</p>
+<h4>
+  O que eu uso</h4>
+<ul>
+  <li>
+    <a href="http://netbeans.org/">Netbeans</a></li>
+</ul>
+<h4>
+  O que cogitaria tamb&eacute;m usar</h4>
+<ul>
+  <li>
+    <a href="http://www.eclipse.org/">Eclipse</a> e derivados diretos, como o <a href="http://aptana.com/">Aptana</a></li>
+  <li>
+    <a href="http://www.zend.com/products/studio/">Zend Studio</a></li>
+</ul>
+<h3>
+  Use um editor &quot;leve&quot; para tarefas &quot;leves&quot;</h3>
+<p>
+  Algo que em geral as IDEs &quot;pesadas&quot; tem em comum &eacute; que tendem a ser complexas demais quando voc&ecirc; apenas precisa editar um arquivo. Algumas simplesmente tornam um mart&iacute;rio voc&ecirc; querer fazer algo complexo sem ter que setar um projeto inteiro. Solu&ccedil;&atilde;o? Usar mais de uma IDE para rotinas diferentes. Independente da situa&ccedil;&atilde;o, mesmo seu editor leve deve ter, no m&iacute;nimo, real&ccedil;ar sintaxe. Mas o que eu diria que realmente &eacute; importante &eacute; ele ser r&aacute;pido e n&atilde;o travar.</p>
+<h4>
+  O que eu uso</h4>
+<ul>
+  <li>
+    <a href="http://notepad-plus-plus.org/">Notepad++</a></li>
+</ul>
+<h4>
+  O que cogitaria tamb&eacute;m usar</h4>
+<p>
+  Em Linux, praticamente qualquer um atende esse perfil. Em Mac, n&atilde;o tenho experi&ecirc;ncia consistente para recomendar algo, mas op&ccedil;&otilde;es neste perfil n&atilde;o s&atilde;o complicadas de encontrar.</p>
+<h3>
+  Use editores que n&atilde;o tenham GUI</h3>
+<p>
+  Esse &eacute; o tipo de coisa que envolve em especial o pessoal que lida com manuten&ccedil;&atilde;o de servidores. Quando se trata de uma edi&ccedil;&atilde;o rapida, ou mesmo quando fazer o download de um arquivo em seu computador local, editar com ferramentas locais, e enviar para o servidor &eacute; uma tarefa que por quest&otilde;es t&eacute;cnicas &eacute; realmente dificultada, vale a pena entender como usar um editor n&atilde;o visual. Voc&ecirc; n&atilde;o precisa ser um mestre, mas sim, saber pelo menos como abrir um arquivo editar e salvar. N&atilde;o ria: editores n&atilde;o visuais em geral n&atilde;o tem uma barra de tarefas, e exigem uma combina&ccedil;&atilde;o de teclas para fazer algumas rotinas como fechar o arquivo sem salvar. Ent&atilde;o, apenas n&atilde;o entre em p&acirc;nico, se estiver em algum momento que encontrar uma situa&ccedil;&atilde;o parecida com a que cito aqui, google a respeito de algum desses editores, e aprenda a us&aacute;-lo. N&atilde;o &eacute; dificil encontrar tutoriais por a&iacute; a respeito.</p>
+<h4>
+  O que eu uso</h4>
+<ul>
+  <li>
+    VIM/VI</li>
+</ul>
+<h3>
+  Documente seu c&oacute;digo</h3>
+<p>
+  Se voc&ecirc; programa, em especial se &eacute; backend developer ou ent&atilde;o frontend developer que trabalha tamb&eacute;m com Javascript, realmente vale a pena parar e aprender a documentar seu c&oacute;digo. Eu entendo que as vezes ele pode parecer simples demais, por&eacute;m o h&aacute;bito de fazer isso prov&ecirc; retornos a m&eacute;dio e longo prazo. Combe documentar seu c&oacute;digo bem, com organizar ele usando um controle de vers&atilde;o ou, pelo menos, ter todo o seu passado de c&oacute;digo organizado de forma f&aacute;cil, e sua agilidade ao fazer novos projetos ser&aacute; melhor.</p>
+<p>
+  Ter disciplina pra documentar faz diferen&ccedil;a. Fa&ccedil;a c&oacute;digos bem feitos e flex&iacute;veis hoje, e em um pr&oacute;ximo projeto, voc&ecirc; poder&aacute; reus&aacute;-lo. E quando estiver nesse outro projeto, voc&ecirc; ir&aacute; ter que fazer mais c&oacute;digo e, se por um lado voc&ecirc; ganhou tempo &quot;se copiando&quot;, ser&aacute; ent&atilde;o o seu momento de parar e fazer c&oacute;digo flex&iacute;vel e bem documentado que, sim, leva mais tempo, mas... o seu cliente n&atilde;o tinha ganho tempo por que voc&ecirc; usou seus pr&oacute;prios peda&ccedil;os de c&oacute;digos de sua cole&ccedil;&atilde;o? &Eacute; uma troca justa. E se voc&ecirc; pegou um gerente de projetos que quer inclusive mandar COMO voc&ecirc; deve fazer seu c&oacute;digo, d&ecirc; a ele duas op&ccedil;&otilde;es: <strong>sim </strong>e <strong>n&atilde;o</strong>.</p>
+<p>
+  O que eu uso</p>
+<ul>
+  <li>
+    <a href="http://www.doxygen.org">Doxygen</a></li>
+</ul>
+<p>
+  Algo que eu j&aacute; usei, e que &eacute; o mais comum para quem programa em PHP &eacute; o <a href="http://www.phpdoc.org/">phpDocumentator</a>, por&eacute;m eu pessoalmente o desaconselho. Tudo que o phpDocumentator faz, o Doxygen, se configurado, faz uma documenta&ccedil;&atilde;o equivalente. E, a vantagem do Doxygen &eacute; que ele &eacute; mais flexivel: ele funciona tamb&eacute;m para outras linguagens. E, c&aacute; entre n&oacute;s, j&aacute; procurou usar o phpDocumentator para gerar a documenta&ccedil;&atilde;o de uma quantidade enorme de arquivos? Ele demora pois roda via o pr&oacute;prio servidor, enquanto esta outra sugest&atilde;o que falo tem uma IDE especifica para gerar a documenta&ccedil;&atilde;o.</p>
+<p>
+  &nbsp;</p>
+<h3>
+  Enfim... e quanto ao perfil geral ao programar</h3>
+<p>
+  Algo que em geral n&atilde;o v&atilde;o falar pra voc&ecirc;, se &eacute; que voc&ecirc; j&aacute; n&atilde;o chegou em uma fase em que sabe disso, &eacute; que quanto mais voc&ecirc; produzir, mais v&atilde;o querer que voc&ecirc; produza caso voc&ecirc; trabalhe para terceiros em regime a m&eacute;dio/longo prazo. A quest&atilde;o &eacute; que se voc&ecirc; parar algum tempo, ainda que seja fora do seu hor&aacute;rio de trabalho, e descobrir modos de fazer c&oacute;digo decente ainda mais r&aacute;pido do que j&aacute; faz, isso ainda assim &eacute; bom. Percebo que tem pessoas que tendem a querer obscurecer o c&oacute;digo, ou documentar o m&iacute;nimo poss&iacute;vel na esperan&ccedil;a que, se for demitido, sentir&atilde;o sua falta, e, se esse &eacute; seu caso, eu recomendo o contr&aacute;rio: substitua seu medo por um foda-se e seu certo ego&iacute;smo por um par de fones de ouvidos grandes e de boa qualidade e escute musicas utilizadas em terapias para concentra&ccedil;&atilde;o, como para o pessoal que tem d&eacute;ficit de aten&ccedil;&atilde;o. Mesmo que o c&oacute;digo atual n&atilde;o precise ser t&atilde;o bem feito, se voc&ecirc; procura ir, de forma gradativa, entregar algo melhor do que o pedido, isso faz voc&ecirc; evoluir gradativamente.&nbsp;</p>
+<p>
+  Um designer mostra uma imagem; um webdesigner mostra um site; um programador mostra o c&oacute;digo; Se s&oacute; voc&ecirc; l&ecirc; seu c&oacute;digo, quer seja ao conseguir um parceiro programador para dar uma melhorada na sua vida, ou ent&atilde;o ao procurar um emprego, &eacute; justamente esse tipo de comportamento, que poderia ser considerado como perda de tempo ou risco maior de &quot;n&atilde;o ser t&atilde;o necess&aacute;rio&quot;, &eacute; o que realmente vai importar e diferenciar em ser ou n&atilde;o contratado e por qual valor.</p>
+<p>
+  Ok que podem argumentar que, no final das contas, para o usu&aacute;rio realmente final, pouco importa se o c&oacute;digo foi bem feito ou n&atilde;o, por ele nunca vai saber, mas se for parar para pensar, exceto para outras pessoas que lidam direto com c&oacute;digo, mesmo as que trabalham com voc&ecirc;, isso tamb&eacute;m importa pouco. Paci&ecirc;ncia: se escolheou ser programador n&atilde;o espere reconhecimento e, mesmo quando receber, certamente perto do trabalho que passou vai ser pequeno a um n&iacute;vel dentro da equipe que trabalhou que era melhor nem ter recebido. Olhando por esse aspecto, ou voc&ecirc; vai acabar sendo desleixado com o que faz, ou vai entrar no clube do pessoal que faz o c&oacute;digo pra si mesmo e ser mais feliz.</p>
+<p>
+  E bato na tecla de que o quanto e como o programador quer produzir acaba sendo at&eacute; mais importante que metodologias, e o quanto ele gosta do que est&aacute; fazendo. Isso faz diferen&ccedil;a. E, em uma &aacute;rea competitiva, tem que ter sangue frio. Hoje, se eu fosse classificar em um macro-estilo de como fazer c&oacute;digo, eu diria que os extremos s&atilde;o o modo mais individualista e o modo mais coletivista. Deixemos a quest&atilde;o de &eacute;tica e de moral de lado e sejamos pr&aacute;ticos, e nem vou parar para ressaltar vantagens sobre um perfil para o outro. Um supervisor teria receio de demitir ambos os perfis por motivos diferentes aka um &quot;e quem eu colocaria no lugar dele na minha empresa?&quot;, ou um &quot;e quem eu colocaria no lugar dele na minha empresa, e&nbsp;em qual empresa ele vai trabalhar depois que eu demitir ele?&quot;. Como voc&ecirc; gostariam de ser lembrado?</p>
+
+	
+	<ul class="pager pagenav">
+	<li class="previous">
+		<a href="/pyhton/grupo-de-estudos-sobre-pyhton.html" rel="prev">&lt; Ant</a>
+	</li>
+	<li class="next">
+		<a href="/mysql/multiples-current-timestamp-workaround.html" rel="next">Próx &gt;</a>
+	</li>
+</ul>
+						 </article>
+
+                    </main>
+                    
+                </div>
+                            </div>
+            <nav class="navegacao-complementar">
+              <h2 class="screen-reader-only">Navegação Complementar</h2>
+              <div class="row-fluid">
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Profissional</h2>
+		
+			<ul class="nav menu">
+<li class="item-277"><a href="curso.html" >Cursos e Treinamentos</a></li><li class="item-127"><a href="/profissional/suporte-joomla.html" >Consutoria em Joomla</a></li><li class="item-347"><a href="/profissional/pericia-forense-digital-websites-invadidos-hackeados.html" >Perícia Forense Digital</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable_menu">
+
+					<h2 class="page-header">Veja Também</h2>
+		
+			<ul class="nav menu">
+<li class="item-279"><a href="palestra.html" >Palestras</a></li><li class="item-266"><a href="podcast.html" >Podcasts</a></li><li class="item-273"><a href="https://github.com/fititnt" >Github</a></li><li class="item-100 parent"><a href="bash.html" >Bash</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Joomla, JPlatform e Afins</h2>
+		
+			<ul class="nav menu">
+<li class="item-165"><a href="joomleiro.html" >O que é &quot;Joomleiro&quot;?</a></li><li class="item-162"><a href="iniciante-joomla.html" >Dicas para Iniciantes</a></li><li class="item-163"><a href="designer-joomla.html" >Dicas para Designers</a></li><li class="item-164"><a href="programador-joomla.html" >Dicas para Programadores</a></li><li class="item-296"><a href="http://forum.joomla.org/viewforum.php?f=23" >Suporte Gratuito</a></li><li class="item-297"><a href="/profissional/suporte-joomla.html" >Suporte Pago</a></li></ul>
+
+		</div>
+
+	
+                </div>
+                <div class="span3">
+                		<div class="moduletable">
+
+					<h2 class="page-header">Recomendo</h2>
+		
+			<ul class="nav menu">
+<li class="item-46"><a href="http://danielcorrea.me/" >Daniel Correa</a></li><li class="item-304"><a href="http://www.vivendoporai.com.br/" >Juliana Fernandes</a></li><li class="item-44"><a href="http://ronildo.com.br/blog/index.php" >Ronildo</a></li></ul>
+
+		</div>
+
+	
+                </div>
+              </div>
+            </nav>
+            <footer class="footer" role="contentinfo">
+              Emerson Rocha Luiz &copy; 2014<br />
+              Site de Web Developer focado em boas práticas. Programação, cursos, treinamentos in company, consutoria e suporte avançado.<br />
+              <a href="http://joomla.org" target="_blank">Joomla!</a> | <a href="http://html5.validator.nu/?doc=melhore-sua-produtividade-ao-fazer-codigo" target="_blank" title="HTML5 Valid" rel="nofollow">HTML5</a> <!--| <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank">CSS3</a></p>//Twitter boostrap ferrando com meu CSS :( -->
+            </footer>
+        </div>
+    </div>
+        <div>
+            <div class="container">
+                <hr />
+                
+                <p class="span12 center">fititnt.org is not affiliated with or endorsed by the Joomla Project or Open Source Matters. The Joomla logo is used under a limited license granted by Open Source Matters	the trademark holder in the United States and other countries<br />
+                <a href="http://www.w3.org/html/logo" target="_blank"><img src="data:image/png;base64,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" alt="HTML5 Valid" width="261" height="64"></a></p>
+            </div>
+        </div>
+        
+        <noscript>Javascript desativado. E daí? Faz tanta diferença para você neste site?</noscript>
+        <script src="/templates/fititntv3/js/fititnt6.js"></script>
+    </body>
+</html>
